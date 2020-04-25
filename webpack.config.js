@@ -1,20 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const copy=require('copy-webpack-plugin');
+const copy = require('copy-webpack-plugin');
 const minicss = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: [path.resolve(__dirname + '/src/index.js')],
+    entry:[path.resolve(__dirname + '/src/index.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
+        filename: '[name].js'
     },
     plugins: [
-        new minicss({filename: './css/[name].css',chunkFilename: './css/[id].css',sourceMap: false}),
-        new copy([{from:'./src/css',to:'./css'},{from:'./src/lib',to:'./lib'}]),
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'template.html') })
+        new minicss({filename: './css/[name].css', chunkFilename: './css/[id].css', sourceMap: false}),
+        new copy([{from: './src/css', to: './css'}, {from: './src/lib', to: './lib'}]),
+        new HtmlWebpackPlugin({template: path.resolve(__dirname, 'src', 'template.html')})
     ],
-    devtool:false,
+    devtool: false,
     module: {
         rules: [
             {
@@ -27,12 +27,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i,
+                test: /\.(sa|sc|c)ss$/i,
                 use: [
                     {
                         loader: minicss.loader,
                         options: {
                             publicPath: '/',
+                            minimize: true
                         },
                     },
                     'css-loader'
