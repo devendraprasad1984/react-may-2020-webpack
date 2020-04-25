@@ -10,10 +10,11 @@ module.exports = {
         filename: 'main.js'
     },
     plugins: [
+        new minicss({filename: './css/[name].css',chunkFilename: './css/[id].css',sourceMap: false}),
         new copy([{from:'./src/css',to:'./css'},{from:'./src/lib',to:'./lib'}]),
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'template.html') }),
-        new minicss({filename: 'css/bundle.css',sourceMap: true,})
+        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'template.html') })
     ],
+    devtool:false,
     module: {
         rules: [
             {
@@ -26,8 +27,16 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                test: /\.css$/i,
+                use: [
+                    {
+                        loader: minicss.loader,
+                        options: {
+                            publicPath: '/',
+                        },
+                    },
+                    'css-loader'
+                ],
             }
         ]
     }
