@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copy=require('copy-webpack-plugin');
+const minicss = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: [path.resolve(__dirname + '/src/index.js')],
@@ -9,8 +10,9 @@ module.exports = {
         filename: 'main.js'
     },
     plugins: [
-        new copy([{from:'./css',to:'./css'}]),
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'template.html') })
+        new copy([{from:'./src/css',to:'./css'},{from:'./src/lib',to:'./lib'}]),
+        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'template.html') }),
+        new minicss({filename: 'css/bundle.css',sourceMap: true,})
     ],
     module: {
         rules: [
@@ -22,6 +24,10 @@ module.exports = {
                     // attach the presets to the loader (most projects use .babelrc_NA file instead)
                     presets: ["@babel/preset-env", "@babel/preset-react"]
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             }
         ]
     }
