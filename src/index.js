@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'toastr/build/toastr.min.css';
-import {SetRouting} from './js/components/Routing';
+import {SetRouting} from './components/Routing';
 
 let headerStyle = {minHeight: '20px', backgroundColor: 'black', color: 'white',position:'relative',width:'100%',top:'0',padding:'0.2%'};
 const App = () => {
