@@ -1,0 +1,38 @@
+{
+  "name": "react-js-python",
+  "version": "1.0.0",
+  "description": "how to build a full brown react app using lib js files",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devendraprasad1984/react-js-python-lib-based.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devendraprasad1984/react-js-python-lib-based/issues"
+  },
+  "homepage": "https://github.com/devendraprasad1984/react-js-python-lib-based#readme"
+}
