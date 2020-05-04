@@ -153,12 +153,12 @@ pre {
     word-break: break-all;
 }
 .xinput input[type='text'] {
-    width: 8%;
-    font-size: 9px;
-    padding: 1px;
-    margin: 1px;
+    width: 8% !important;
+    font-size: 9px !important;
+    padding: 2px 1px 2px 2px !important;
+    margin: 2px 2px 1px 1px !important;
     text-align: right;
-    display:inline-block;
+    display:inline-block !important;
 }
 
 @-ms-viewport {
