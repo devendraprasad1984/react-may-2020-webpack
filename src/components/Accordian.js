@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import {forms, fKeys} from './globals';
 import {success, error, info} from 'toastr';
+import {Modal} from "./Modal";
 
 export const Accordian = ({name, header, counter}) => {
     const [heading, setHeading] = useState(header); //similar to this.setState in class based component
+    const [modalShow, setModalShow] = useState(false);
     const [formKeys, setFormKeys] = useState(fKeys);
     let handleChange = (e) => {
         let {name, dataset, value} = e.target;
@@ -21,7 +23,7 @@ export const Accordian = ({name, header, counter}) => {
             let formX = forms[keyid];
             for (let fm in formX) {
                 let {rowName, cols} = formX[fm];
-                formElm.push(<div key={'acc_div_id_'+fm} className="xinput">
+                formElm.push(<div key={'acc_div_id_' + fm} className="xinput">
                     <span>{rowName}</span>
                     <span className="nestInput">{cols.map((c, i) =>
                         <input key={'ip_' + i + fm}
@@ -45,6 +47,16 @@ export const Accordian = ({name, header, counter}) => {
         pnl.style.display = 'block';
     }
 
+    let submitModal = () => {
+        return (
+            <Modal show={modalShow} contents={'you wont be able to change once you submit, sure to submit'}
+                   title={'Submit Warning'} titleColor={'red'} contentColor={'blue'} close={() => setModalShow(false)} ok={() => {
+                success('thanks for submitting form, it will be freazed');
+                setModalShow(false);
+            }}/>
+        );
+    }
+
     return (
         <div>
             <h1 className="badge grey" style={{width: '100%', textAlign: 'left'}}
@@ -57,8 +69,9 @@ export const Accordian = ({name, header, counter}) => {
                     {
                         counter + 1 < forms.names.length
                             ? <button className="btn black" onClick={() => handleAccordian(counter + 1)}>Next</button>
-                            : <button className="btn red" onClick={() => handleAccordian(counter + 1)}>Submit</button>
+                            : <button className="btn red" onClick={() => setModalShow(true)}>Submit</button>
                     }
+                    {modalShow ? submitModal() : null}
                 </div>
                 <br/>
             </div>
