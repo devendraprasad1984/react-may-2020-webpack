@@ -7,7 +7,7 @@ import {About} from './About';
 import {NotFound} from './NotFound';
 import {QRApp} from './QR';
 import {PdfCsv} from './PDF_CSV';
-import {ReduxTest} from "./ReduxTest";
+import ReduxTest from "./ReduxTest";
 
 const iconNames = linksArr;
 const handleActive = (e) => {
