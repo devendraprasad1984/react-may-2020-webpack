@@ -4,6 +4,7 @@ const copy = require('copy-webpack-plugin');
 const minicss = require('mini-css-extract-plugin');
 
 module.exports = {
+    devtool: 'source-map',
     entry:[path.resolve(__dirname + '/src/index.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -14,7 +15,6 @@ module.exports = {
         new copy([{from: './src/css', to: './css'}, {from: './src/lib', to: './lib'}]),
         new HtmlWebpackPlugin({template: path.resolve(__dirname, 'src', 'template.html')})
     ],
-    devtool: false,
     module: {
         rules: [
             {

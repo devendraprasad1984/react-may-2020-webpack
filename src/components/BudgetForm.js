@@ -30,7 +30,7 @@ export const Budget = ({title, callback}) => {
         <div>
             <h1 className="ribbon">{title}</h1>
             <div>
-                <button className="btn black" onClick={() => submitBudget()}>Submit</button>
+                <button className="btn black" onClick={() => submitBudget()}>Submit test debug JB</button>
                 <button className="btn red" onClick={() => info('resetting, ok!')}>Reset</button>
                 <button className="btn yellow" onClick={() => {
                     setModalShow(true);

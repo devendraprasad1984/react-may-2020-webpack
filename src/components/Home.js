@@ -51,7 +51,7 @@ export const Home = () => {
         let handlePromiseData = () => {
             console.log('inside promise');
             let alldata = {};
-            for (let i = 1; i < 10; i++) {
+            for (let i = 1; i < 1; i++) {
                 fetch('https://jsonplaceholder.typicode.com/todos/' + i)
                     .then(res => res.json())
                     .then(res => {
