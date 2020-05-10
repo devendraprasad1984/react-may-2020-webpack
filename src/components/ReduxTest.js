@@ -28,8 +28,12 @@ const ReduxTest = (props) => {
         let todos=props.TodosObject;
         console.log('inside printing',todos);
         return todos.map((x,i)=><div key={'id_div_'+i} style={{fontSize:'10pt',fontWeight:'bolder',lineHeight:'1.3'}}>
-            <span style={{textDecoration:x.completed?'line-through':'none'}}>{x.text}</span>
-            - {x.completed?'DONE':'Pending'}</div>);
+            <span style={{textDecoration:x.completed?'line-through':'none',width:'500px'}}>{x.text} - {x.completed?'DONE':'Pending'}</span>
+            <button className='btn red right' onClick={() => deleteToDo(i)}>X</button>
+        </div>);
+    }
+    let deleteToDo=(index)=>{
+        dispatch({type: 'DELETE_TODO', index});
     }
     let handleInput=(e,attrs)=>{
         console.log(e,attrs);

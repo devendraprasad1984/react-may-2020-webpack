@@ -20,6 +20,11 @@ export const TodosObject = (state = [], action) => {
         ]
     } else if (action.type === 'TO_DO_LIST')
         return [...state]
+    else if (action.type === 'DELETE_TODO'){
+        let old=[...state];
+        // console.log('old values',old,'deleted',action.index);
+        return [...old.filter((x,i)=>i!==action.index)];
+    }
     else if (['COMPLETE_TODO', 'COMPLETE_TODO_ALL'].indexOf(action.type) !== -1) {
         // console.log('inside completed & all');
         return state.map((todo, index) => {

@@ -18,10 +18,10 @@ let headerStyle = {
 };
 let todoAppReducer = combineReducers({visibilityFilter, TodosObject});
 let store = createStore(todoAppReducer);
-const unsubscribe = store.subscribe(() => {
-    toastify.info('changing state: ' + Object.keys(store.getState()));
-    console.log('changing state', store.getState());
-}); //on every state change
+// const unsubscribe = store.subscribe(() => {
+//     toastify.info('changing state: ' + Object.keys(store.getState()));
+//     console.log('changing state', store.getState());
+// }); //on every state change
 
 const App = () => {
     return <div className='rightContainer'>
