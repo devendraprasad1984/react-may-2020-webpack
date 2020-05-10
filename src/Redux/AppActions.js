@@ -1,17 +1,20 @@
-export const setVisibilityAction = (filter) => {
-    return {
-        type: 'SET_VISIBILITY_FILTER'
-        , filter
-    }
-}
+import {enums} from "./enums";
+
 export const addTodo = (text) => {
     return {
-        type: 'ADD_TODO'
+        type: enums.ADD_TODO
         , text
     }
 }
-export const completeAction = () => {
+export const delTodo = (index) => {
     return {
-        type: 'COMPLETE_TODO'
+        type: enums.DELETE_TODO
+        , index
+    }
+}
+export const completeAllTodo = (index) => {
+    return {
+        type: enums.COMPLETE_TODO_ALL
+        , index
     }
 }

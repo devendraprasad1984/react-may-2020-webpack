@@ -1,16 +1,8 @@
+import {enums} from './enums';
+
 //reducers are pure function (who return value solely depends on their input) has an action to catch as soon as dispatcher happens, previous state and an action, and return the next state
-
-export const visibilityFilter = (state = 'SHOW_ALL', action) => {
-    switch (action.type) {
-        case 'SET_VISIBILITY_FILTER':
-            return action.filter
-        default:
-            return state
-    }
-}
-
-export const TodosObject = (state = [], action) => {
-    if (action.type === 'ADD_TODO') {
+export const TodosReducer = (state = [], action) => {
+    if (action.type === enums.ADD_TODO) {
         return [
             ...state,
             {
@@ -18,14 +10,14 @@ export const TodosObject = (state = [], action) => {
                 completed: false
             }
         ]
-    } else if (action.type === 'TO_DO_LIST')
+    } else if (action.type === enums.TO_DO_LIST)
         return [...state]
-    else if (action.type === 'DELETE_TODO'){
+    else if (action.type === enums.DELETE_TODO){
         let old=[...state];
         // console.log('old values',old,'deleted',action.index);
         return [...old.filter((x,i)=>i!==action.index)];
     }
-    else if (['COMPLETE_TODO', 'COMPLETE_TODO_ALL'].indexOf(action.type) !== -1) {
+    else if ([enums.COMPLETE, enums.COMPLETE_TODO_ALL].indexOf(action.type) !== -1) {
         // console.log('inside completed & all');
         return state.map((todo, index) => {
             if (index === action.index || action.index === -1000)

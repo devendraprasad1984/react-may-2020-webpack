@@ -1,4 +1,4 @@
-export const linksArr = ['/', '/budget', '/about', '/qr', '/pdf_csv', '/redux'];
+export const linksArr = ['/', '/budget', '/about', '/qr', '/pdf_csv', '/redux-todo'];
 export const forms = {
     names: ['Project Details', 'Capex/Revx', 'Costs', 'Benefits'],
     0: [{rowName: 'Net Interest Income', cols: [0, 0, 0, 0, 0]}, {
