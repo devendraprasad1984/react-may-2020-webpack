@@ -4,7 +4,7 @@ import 'toastr/build/toastr.min.css';
 import {SetRouting} from './components/Routing';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import {visibilityFilter, todos} from './Redux/AppReducers';
+import {visibilityFilter, TodosObject} from './Redux/AppReducers';
 import * as toastify from "toastr";
 
 let headerStyle = {
@@ -16,7 +16,7 @@ let headerStyle = {
     top: '0',
     padding: '0.2%'
 };
-let todoAppReducer = combineReducers({visibilityFilter, todos});
+let todoAppReducer = combineReducers({visibilityFilter, TodosObject});
 let store = createStore(todoAppReducer);
 const unsubscribe = store.subscribe(() => {
     toastify.info('changing state: ' + Object.keys(store.getState()));

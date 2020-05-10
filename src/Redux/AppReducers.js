@@ -9,7 +9,7 @@ export const visibilityFilter = (state = 'SHOW_ALL', action) => {
     }
 }
 
-export const todos = (state = [], action) => {
+export const TodosObject = (state = [], action) => {
     if (action.type === 'ADD_TODO') {
         return [
             ...state,

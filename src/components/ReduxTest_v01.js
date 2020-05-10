@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {createStore, combineReducers} from 'redux';
-import {visibilityFilter, todos} from '../Redux/AppReducers';
+import {visibilityFilter, TodosObject} from '../Redux/AppReducers';
 import {addTodo} from "../Redux/AppActions";
 
 
@@ -10,7 +10,7 @@ export const ReduxTest = () => {
     // export default function todoApp(state = {}, action) {
     let [users, setUsers] = useState([]);
     let [canPrint, setCanPrint] = useState(false);
-    let todoAppReducer = combineReducers({visibilityFilter, todos});
+    let todoAppReducer = combineReducers({visibilityFilter, todos: TodosObject});
     //     return {
     //         visibilityFilter: visibilityFilter(state.visibilityFilter, action),
     //         todos: todos(state.todos, action)
