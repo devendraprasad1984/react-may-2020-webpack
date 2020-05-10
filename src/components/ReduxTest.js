@@ -21,6 +21,9 @@ const ReduxTest = (props) => {
         dispatch(allActions.completeAllTodo(-1000));
         // setCanPrint(true);
     }
+    let undoAllComplete = () => {
+        dispatch(allActions.undoAllTodo());
+    }
     let printListing=()=>{
         // if(!canPrint) return;
         // let todos=[...props.TodosObject.map(x=>JSON.parse(JSON.stringify(x)))];
@@ -51,6 +54,7 @@ const ReduxTest = (props) => {
             <h1 className="ribbon">React Redux central state test</h1>
             <button className='btn' onClick={() => todoDispatch()}>Add Bulk Todos</button>
             <button className='btn' onClick={() => markAllComplete()}>Mark All</button>
+            <button className='btn' onClick={() => undoAllComplete()}>UNDO</button>
             <div>
                 <span>Add Text</span>
                 <input ref={runtimeText} onChange={(e)=>handleInput(e)}/>

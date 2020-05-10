@@ -190,11 +190,11 @@ section {
     min-width: -moz-max-content;
     min-width: max-content;
     border-radius: 2px;
-    left: calc(-1rem - 1.2em);
-    margin: 1.2em;
-    padding: 2px;
+    /*left: calc(-1rem - 1.2em);*/
+    /*margin: 1.2em;*/
+    padding: 5px;
     font-size: 14px;
-    border:2px solid #8a73ff;
+    border:2px solid gray;
 }
 
 .ribbon:after {

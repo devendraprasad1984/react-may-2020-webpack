@@ -23,7 +23,11 @@ export const TodosReducer = (state = [], action) => {
                 return Object.assign({}, todo, {completed: true});
             return todo
         })
-    } else
+    }else if (action.type === enums.UNDO_TODO_ALL) {
+        return state.map((todo) => {
+            return Object.assign({}, todo, {completed: false});
+        })
+    }  else
         return state
 }
 

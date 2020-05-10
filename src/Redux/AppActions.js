@@ -12,6 +12,9 @@ export const delTodo = (index) => {
 export const completeAllTodo = (index) => {
     return {type: enums.COMPLETE_TODO_ALL, index}
 }
+export const undoAllTodo = (index) => {
+    return {type: enums.UNDO_TODO_ALL, index}
+}
 export const increment = () => {
     return {type: enums.INCREMENT}
 }
