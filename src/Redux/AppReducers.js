@@ -12,12 +12,11 @@ export const TodosReducer = (state = [], action) => {
         ]
     } else if (action.type === enums.TO_DO_LIST)
         return [...state]
-    else if (action.type === enums.DELETE_TODO){
-        let old=[...state];
+    else if (action.type === enums.DELETE_TODO) {
+        let old = [...state];
         // console.log('old values',old,'deleted',action.index);
-        return [...old.filter((x,i)=>i!==action.index)];
-    }
-    else if ([enums.COMPLETE, enums.COMPLETE_TODO_ALL].indexOf(action.type) !== -1) {
+        return [...old.filter((x, i) => i !== action.index)];
+    } else if ([enums.COMPLETE, enums.COMPLETE_TODO_ALL].indexOf(action.type) !== -1) {
         // console.log('inside completed & all');
         return state.map((todo, index) => {
             if (index === action.index || action.index === -1000)
@@ -26,4 +25,16 @@ export const TodosReducer = (state = [], action) => {
         })
     } else
         return state
+}
+
+export const CounterReducer = (state = 0, action) => {
+    if (enums.INCREMENT === action.type) {
+        return state+1;
+    } else if (enums.DECREMENT === action.type) {
+        return state-1;
+    } else if (enums.RESET === action.type) {
+        return 0;
+    } else {
+        return state;
+    }
 }
