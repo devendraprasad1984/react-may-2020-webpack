@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {decrement, increment, reset} from "../Redux/AppActions";
 
 const CounterRedux = (props) => {
-    let {counter,increment,decrement,reset} = props;
+    let {counter,increment,decrement,reset,todo} = props;
     // console.log('state/dispatch', counter,increment,decrement,reset);
     return (
         <div>
@@ -12,14 +12,16 @@ const CounterRedux = (props) => {
             <button className='btn teal' onClick={() => decrement()}>Decrement</button>
             <button className='btn red' onClick={() => reset()}>Reset</button>
             <h1>Changing Counter: {counter}</h1>
+            {/*<h2>todos from other component: {todo.map(x=><div>{x.text}</div>)}</h2>*/}
         </div>
     )
 }
 let mapState = (state, ownProps) => {
-    let {CounterReducer} = state;
+    let {CounterReducer,TodosReducer} = state;
     console.log('state counter', state, CounterReducer);
     return {
         counter: CounterReducer
+        ,todo:TodosReducer
     }
 }
 let mapDispatch = (dispatch) => {
