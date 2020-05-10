@@ -1,4 +1,4 @@
-import React, {useState,useRef} from 'react';
+import React, {useRef} from 'react';
 import {connect} from 'react-redux';
 import * as allActions from "../Redux/AppActions";
 import * as toasify from "toastr";
@@ -7,9 +7,7 @@ import {enums} from "../Redux/enums";
 const ReduxTest = (props) => {
     let act=allActions.todoActions();
     let {dispatch,TodosReducer}=props;
-    let [users, setUsers] = useState([]);
     let runtimeText=useRef();
-    let [canPrint, setCanPrint] = useState(false);
     let todoDispatch = () => {
         // Every time the state changes, log it
         dispatch({type: enums.ADD_TODO, text: 'new text'});

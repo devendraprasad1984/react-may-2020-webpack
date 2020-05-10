@@ -47,9 +47,9 @@ let initPanel=mail_fixtures.map(x=>x.name);
 export const MailerPanelReducer = (state = initPanel, action) => {
     return state;
 }
-export const MailerHeaderReducer = (state = 'Inbox', action) => {
-    return action.name||state;
-}
+// export const MailerHeaderReducer = (state = 'Inbox', action) => {
+//     return action.name||state;
+// }
 export const MailerListReducer = (state = mail_fixtures, action) => {
     // let initState=[...mail_fixtures.map(x=>JSON.parse(JSON.stringify(x)))];//making a deep copy
     let initState=mail_fixtures;
