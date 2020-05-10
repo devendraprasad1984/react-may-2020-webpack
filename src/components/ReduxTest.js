@@ -5,6 +5,7 @@ import * as toasify from "toastr";
 import {enums} from "../Redux/enums";
 
 const ReduxTest = (props) => {
+    let act=allActions.todoActions();
     let {dispatch,TodosReducer}=props;
     let [users, setUsers] = useState([]);
     let runtimeText=useRef();
@@ -12,17 +13,17 @@ const ReduxTest = (props) => {
     let todoDispatch = () => {
         // Every time the state changes, log it
         dispatch({type: enums.ADD_TODO, text: 'new text'});
-        dispatch(allActions.addTodo('hello this is again text add by addToDo function'));
-        dispatch(allActions.addTodo('new text_OK FINE I am doing really well'));
+        dispatch(act.addTodo('hello this is again text add by addToDo function'));
+        dispatch(act.addTodo('new text_OK FINE I am doing really well'));
     }
     let markAllComplete = () => {
         dispatch({type: enums.COMPLETE,index:1});
         // dispatch({type: 'COMPLETE_TODO_ALL',index:-1000});
-        dispatch(allActions.completeAllTodo(-1000));
+        dispatch(act.completeAllTodo(-1000));
         // setCanPrint(true);
     }
     let undoAllComplete = () => {
-        dispatch(allActions.undoAllTodo());
+        dispatch(act.undoAllTodo());
     }
     let printListing=()=>{
         // if(!canPrint) return;
@@ -35,7 +36,7 @@ const ReduxTest = (props) => {
         </div>);
     }
     let deleteToDo=(index)=>{
-        dispatch(allActions.delTodo(index));
+        dispatch(act.delTodo(index));
         toasify.error('deleted');
     }
     let handleInput=(e)=>{

@@ -120,6 +120,26 @@ iframe {
     word-wrap: break-word;
 }
 
+.mailboxes {
+    margin: 25px auto;
+    width: 120px;
+}
+
+.mailbox {
+    margin-top: 25px;
+}
+
+.email-viewer {
+    padding: 25px;
+}
+
+.none-selected {
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+
 pre {
     font-family: monospace, monospace; /* 1 */
     font-size: inherit; /* 2 */
@@ -747,7 +767,7 @@ pre code {
     width: 100%;
     border-bottom: 1px solid #8a8a8a;
 }
-.line:first-child{
+.line.header{
     font-weight: bolder;
     font-size: 14px;
     background-color: #f7f7f7;

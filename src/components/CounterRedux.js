@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {decrement, increment, reset} from "../Redux/AppActions";
+import * as actions from "../Redux/AppActions";
 
 const CounterRedux = (props) => {
     let {counter,increment,decrement,reset,todo} = props;
@@ -25,10 +25,11 @@ let mapState = (state, ownProps) => {
     }
 }
 let mapDispatch = (dispatch) => {
+    let act=actions.counterActions();
     return {
-        increment:()=>dispatch(increment())
-        ,decrement:()=>dispatch(decrement())
-        ,reset:()=>dispatch(reset())
+        increment:()=>dispatch(act.increment())
+        ,decrement:()=>dispatch(act.decrement())
+        ,reset:()=>dispatch(act.reset())
     }
 }
 export default connect(mapState, mapDispatch)(CounterRedux); //connect is higher order component passes state and dispatchers as props to connected component

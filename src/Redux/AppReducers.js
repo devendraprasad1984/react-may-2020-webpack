@@ -1,4 +1,5 @@
 import {enums} from './enums';
+import {mail_fixtures} from "../data/mailbox";
 
 //reducers are pure function (who return value solely depends on their input) has an action to catch as soon as dispatcher happens, previous state and an action, and return the next state
 export const TodosReducer = (state = [], action) => {
@@ -23,22 +24,37 @@ export const TodosReducer = (state = [], action) => {
                 return Object.assign({}, todo, {completed: true});
             return todo
         })
-    }else if (action.type === enums.UNDO_TODO_ALL) {
+    } else if (action.type === enums.UNDO_TODO_ALL) {
         return state.map((todo) => {
             return Object.assign({}, todo, {completed: false});
         })
-    }  else
+    } else
         return state
 }
 
 export const CounterReducer = (state = 0, action) => {
     if (enums.INCREMENT === action.type) {
-        return state+1;
+        return state + 1;
     } else if (enums.DECREMENT === action.type) {
-        return state-1;
+        return state - 1;
     } else if (enums.RESET === action.type) {
         return 0;
     } else {
         return state;
     }
+}
+let initPanel=mail_fixtures.map(x=>x.name);
+export const MailerPanelReducer = (state = initPanel, action) => {
+    return state;
+}
+export const MailerListReducer = (state = mail_fixtures, action) => {
+    // let initState=[...mail_fixtures.map(x=>JSON.parse(JSON.stringify(x)))];//making a deep copy
+    let initState=mail_fixtures;
+    if (enums.MAIL_LIST === action.type) {
+        console.log('in mail listing',initState.filter(x =>x.name));
+        return [...initState.filter(x => x.name === action.name).map(x => x.emails)];
+    } else {
+        return [...initState.filter(x => x.name === 'Inbox').map(x => x.emails)];
+    }
+    //whatever i am returning is gonna be my next state be default
 }
