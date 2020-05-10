@@ -13,4 +13,5 @@ export const enums = {
     , MAIL_SELECTED_LINE: 'MAIL_SELECTED_LINE'
     , INBOX: 'Inbox'
     , SPAM: 'Spam'
+    ,HEAD_LABEL:'HEAD_LABEL'
 }

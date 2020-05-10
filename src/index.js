@@ -4,7 +4,7 @@ import 'toastr/build/toastr.min.css';
 import {SetRouting} from './components/Routing';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import {TodosReducer,CounterReducer,MailerListReducer,MailerPanelReducer} from './Redux/AppReducers';
+import {TodosReducer,CounterReducer,MailerListReducer,MailerPanelReducer,MailerHeaderReducer} from './Redux/AppReducers';
 
 let headerStyle = {
     minHeight: '20px',
@@ -15,7 +15,7 @@ let headerStyle = {
     top: '0',
     padding: '0.2%'
 };
-let rootReducer = combineReducers({TodosReducer,CounterReducer,MailerListReducer, MailerPanelReducer});
+let rootReducer = combineReducers({TodosReducer,CounterReducer,MailerListReducer, MailerPanelReducer,MailerHeaderReducer});
 let store = createStore(rootReducer); //, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 // const unsubscribe = store.subscribe(() => {
 //     toastify.info('changing state: ' + Object.keys(store.getState()));

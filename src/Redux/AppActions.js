@@ -37,11 +37,14 @@ export const mailerActions = () => {
         console.log('listing name',name);
         return {type: enums.MAIL_LIST,name}
     }
+    const headLabel = (name) => {
+        return {type: enums.HEAD_LABEL,name}
+    }
     const mailPanel = () => {
         return {type: enums.MAIL_PANEL}
     }
     const mailSelection = () => {
         return {type: enums.MAIL_SELECTED_LINE}
     }
-    return {mailList, mailPanel, mailSelection}
+    return {mailList, mailPanel, mailSelection,headLabel}
 }
