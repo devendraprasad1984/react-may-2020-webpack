@@ -37,9 +37,6 @@ const ReduxMailExample = (props) => {
     return (
         <div>
             <h1 className="ribbon">Email Redux Example</h1>
-            <div>
-                <button className='btn' onClick={selecting}>Selection</button>
-            </div>
             <div className='left' style={{width: '15%'}}>
                 {mailsPanel.map((x, i) => <div key={'xp_' + i}>
                     <button className='btn teal' onClick={()=>setHeaderAndList(x)}>{x}</button>

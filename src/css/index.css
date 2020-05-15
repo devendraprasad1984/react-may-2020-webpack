@@ -720,12 +720,12 @@ pre code {
 }
 
 .rightContainer {
-    margin-left: 90px; /* Same as the width of the sidebar */
+    margin-left: 140px; /* Same as the width of the sidebar */
     padding: 0px 10px;
 }
 .sidenav {
     height: 100%;
-    width: 100px;
+    width: 150px;
     position: fixed;
     z-index: 102;
     top: 0;
