@@ -10,6 +10,7 @@ import {PdfCsv} from './PDF_CSV';
 import ReduxTest from "./ReduxTest";
 import CounterRedux from "./CounterRedux";
 import ReduxMailExample from "./ReduxMailExample";
+import SimpleHooks from "./SimpleHooks";
 
 const iconNames = linksArr;
 const handleActive = (e) => {
@@ -46,6 +47,7 @@ export const SetRouting = () => {
                 <Route path={iconNames[5]}><ReduxTest/></Route>
                 <Route path={iconNames[6]}><CounterRedux/></Route>
                 <Route path={iconNames[7]}><ReduxMailExample/></Route>
+                <Route path={iconNames[8]}><SimpleHooks/></Route>
                 <Route path="*" component={NotFound}/>
             </Switch>
         </div>

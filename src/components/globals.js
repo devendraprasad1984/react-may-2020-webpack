@@ -1,4 +1,6 @@
-export const linksArr = ['/', '/budget', '/about', '/qr', '/pdf_csv', '/redux-todo', '/redux-counter', '/redux-mail'];
+import {useState, useEffect} from "react";
+
+export const linksArr = ['/', '/budget', '/about', '/qr', '/pdf_csv', '/redux-todo', '/redux-counter', '/redux-mail', '/simple-hooks'];
 export const forms = {
     names: ['Project Details', 'Capex/Revx', 'Costs', 'Benefits'],
     0: [{rowName: 'Net Interest Income', cols: [0, 0, 0, 0, 0]}, {
@@ -21,4 +23,32 @@ export const forms = {
         cols: [0, 0, 0, 0, 0, 0, 0, 0]
     }]
 };
-export const fKeys= Object.keys(forms);
+export const fKeys = Object.keys(forms);
+
+export const useFetch = (url) => {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        if (url !== '') {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => setData(data));
+        } else {
+            setData([]);
+        }
+    }, [url]);//[] tell react to load hook only once
+    // async function getData() {
+    //     if (url !== '') {
+    //         const response = await fetch(url);
+    //         const data = await response.json();
+    //         setData(data);
+    //     }else{
+    //         setData([]);
+    //     }
+    // }
+    //
+    // useEffect(() => {
+    //     getData()
+    // }, []);
+
+    return data;
+}
