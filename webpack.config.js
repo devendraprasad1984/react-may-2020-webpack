@@ -3,8 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copy = require('copy-webpack-plugin');
 const minicss = require('mini-css-extract-plugin');
 
+let isDev=process.argv.indexOf('development')!==-1?true:false;
+console.log(process.argv,'isDev: ',isDev);
 module.exports = {
-    devtool: 'source-map',
+    devtool: isDev?'source-map':'',
     entry:[path.resolve(__dirname + '/src/index.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
