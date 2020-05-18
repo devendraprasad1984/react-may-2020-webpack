@@ -62,8 +62,8 @@ export const Home = () => {
         }
         let checkAfterClick = () => {
             console.log('data state from promise', data)
-            for(let i in data){
-                console.log('loading from data',i,data[i]);
+            for (let i in data) {
+                console.log('loading from data', i, data[i]);
             }
         }
         return (
@@ -73,6 +73,37 @@ export const Home = () => {
                 <button className='btn yellow' onClick={() => checkAfterClick()}>check state</button>
             </div>
         )
+    }
+
+    const coworkers = [
+        {first_name: 'Max', last_name: 'Mustermann'},
+        {first_name: 'Vladmimir', last_name: 'Leles'},
+        {first_name: 'Tobias', last_name: 'Anhalt'},
+    ];
+    const [workers, setWorkers] = useState(coworkers);
+    useEffect(()=>{
+        workers.map(x=>x.status='offline');
+    },[]);
+    let changeStatus = (workerObj, index) => {
+        // let worker=workers.filter(x=>x.first_name===workerObj.first_name && x.last_name===workerObj.last_name);
+        let worker=workers[index];
+        worker.status=worker.status==='online'?'offline':'online';
+        let updatedWorkers=[...workers];
+        updatedWorkers[index]=worker;
+        setWorkers(updatedWorkers);
+        console.log('workers',workers);
+    }
+    let testWebbee = () => {
+        return workers.map((x, i) =>
+            <div key={'id'+i}>{x.first_name} - {x.last_name} - {x.status}
+                <div className='right'>
+                    <button className={x.status==='offline'?'btn red':'btn green'} onClick={() => {
+                        changeStatus(x, i)
+                    }}>{x.status}
+                    </button>
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -92,6 +123,10 @@ export const Home = () => {
 
             {semantic_drop_down_check()}
             {promiseCheck()}
+            <div style={{width:'50%'}}>
+                <h1>Webbee First Question Checks</h1>
+                {testWebbee()}
+            </div>
         </div>
     )
 }
