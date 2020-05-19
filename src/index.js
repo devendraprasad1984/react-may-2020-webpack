@@ -24,8 +24,8 @@ let store = createStore(rootReducer); //, window.__REDUX_DEVTOOLS_EXTENSION__ &&
 
 const App = () => {
     return <div className='rightContainer'>
-        <div style={headerStyle}><h1 className="left">App</h1>
-            <h1 className="right">Welcome, Devendra</h1></div>
+        <div style={headerStyle}><h1 className="leftAlign">App</h1>
+            <h1 className="rightAlign">Welcome, Devendra</h1></div>
         <div><SetRouting/></div>
     </div>
 }

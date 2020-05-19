@@ -37,12 +37,12 @@ const ReduxMailExample = (props) => {
     return (
         <div>
             <h1 className="ribbon">Email Redux Example</h1>
-            <div className='left' style={{width: '15%'}}>
+            <div className='leftAlign' style={{width: '15%'}}>
                 {mailsPanel.map((x, i) => <div key={'xp_' + i}>
                     <button className='btn teal' onClick={()=>setHeaderAndList(x)}>{x}</button>
                 </div>)}
             </div>
-            <div className='right' style={{textAlign: 'left', width: '85%'}}>
+            <div className='rightAlign' style={{textAlign: 'left', width: '85%'}}>
                 <h1>{headerDisplay}</h1>
                 <div className='line header'><span>ID</span><span>From</span><span>Subject</span></div>
                 <div>{listEmails()}</div>

@@ -331,11 +331,11 @@ section {
     display: flex;
 }
 
-.right {
+.rightAlign {
     float: right;
 }
 
-.left {
+.leftAlign {
     float: left;
 }
 

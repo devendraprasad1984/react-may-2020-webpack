@@ -13,6 +13,12 @@ export const TodosReducer = (state = [], action) => {
         ]
     } else if (action.type === enums.TO_DO_LIST)
         return [...state]
+    else if (action.type === enums.DONE_TODO) {
+        let old = [...state];
+        // console.log('old values',old,'deleted',action.index);
+        old[action.index].completed=true;
+        return [...old];
+    }
     else if (action.type === enums.DELETE_TODO) {
         let old = [...state];
         // console.log('old values',old,'deleted',action.index);

@@ -984,7 +984,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
     margin: 0 .42857143em 0 -.21428571em
 }
 
-.ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
+.ui.button:not(.icon) > .rightAlign.icon:not(.button):not(.dropdown) {
     margin: 0 -.21428571em 0 .42857143em
 }
 
@@ -1343,7 +1343,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
     border-radius: 0 0 .28571429rem .28571429rem
 }
 
-.ui.left.attached.button {
+.ui.leftAlign.attached.button {
     display: inline-block;
     border-left: none;
     text-align: right;
@@ -1351,7 +1351,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
     border-radius: .28571429rem 0 0 .28571429rem
 }
 
-.ui.right.attached.button {
+.ui.rightAlign.attached.button {
     display: inline-block;
     text-align: left;
     padding-left: .75em;
@@ -5666,11 +5666,11 @@ a.ui.inverted.grey.header:hover {
     color: #cfd0d2 !important
 }
 
-.ui.left.aligned.header {
+.ui.leftAlign.aligned.header {
     text-align: left
 }
 
-.ui.right.aligned.header {
+.ui.rightAlign.aligned.header {
     text-align: right
 }
 
@@ -5936,12 +5936,12 @@ i.vertically.flipped.icon {
     transform: scale(1, -1)
 }
 
-i.clockwise.rotated.icon, i.right.rotated.icon, i.rotated.icon {
+i.clockwise.rotated.icon, i.rightAlign.rotated.icon, i.rotated.icon {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg)
 }
 
-i.counterclockwise.rotated.icon, i.left.rotated.icon {
+i.counterclockwise.rotated.icon, i.leftAlign.rotated.icon {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg)
 }
@@ -6220,28 +6220,28 @@ i.icons .corner.icon {
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
 }
 
-i.icons .top.right.corner.icon {
+i.icons .top.rightAlign.corner.icon {
     top: 0;
     left: auto;
     right: 0;
     bottom: auto
 }
 
-i.icons .top.left.corner.icon {
+i.icons .top.leftAlign.corner.icon {
     top: 0;
     left: 0;
     right: auto;
     bottom: auto
 }
 
-i.icons .bottom.left.corner.icon {
+i.icons .bottom.leftAlign.corner.icon {
     top: auto;
     left: 0;
     right: auto;
     bottom: 0
 }
 
-i.icons .bottom.right.corner.icon {
+i.icons .bottom.rightAlign.corner.icon {
     top: auto;
     left: auto;
     right: 0;
@@ -6331,11 +6331,11 @@ i.icon.align.justify:before {
     content: "\f039"
 }
 
-i.icon.align.left:before {
+i.icon.align.leftAlign:before {
     content: "\f036"
 }
 
-i.icon.align.right:before {
+i.icon.align.rightAlign:before {
     content: "\f038"
 }
 
@@ -6375,11 +6375,11 @@ i.icon.angle.double.down:before {
     content: "\f103"
 }
 
-i.icon.angle.double.left:before {
+i.icon.angle.double.leftAlign:before {
     content: "\f100"
 }
 
-i.icon.angle.double.right:before {
+i.icon.angle.double.rightAlign:before {
     content: "\f101"
 }
 
@@ -6391,11 +6391,11 @@ i.icon.angle.down:before {
     content: "\f107"
 }
 
-i.icon.angle.left:before {
+i.icon.angle.leftAlign:before {
     content: "\f104"
 }
 
-i.icon.angle.right:before {
+i.icon.angle.rightAlign:before {
     content: "\f105"
 }
 
@@ -6439,11 +6439,11 @@ i.icon.arrow.alternate.circle.down:before {
     content: "\f358"
 }
 
-i.icon.arrow.alternate.circle.left:before {
+i.icon.arrow.alternate.circle.leftAlign:before {
     content: "\f359"
 }
 
-i.icon.arrow.alternate.circle.right:before {
+i.icon.arrow.alternate.circle.rightAlign:before {
     content: "\f35a"
 }
 
@@ -6455,11 +6455,11 @@ i.icon.arrow.circle.down:before {
     content: "\f0ab"
 }
 
-i.icon.arrow.circle.left:before {
+i.icon.arrow.circle.leftAlign:before {
     content: "\f0a8"
 }
 
-i.icon.arrow.circle.right:before {
+i.icon.arrow.circle.rightAlign:before {
     content: "\f0a9"
 }
 
@@ -6471,11 +6471,11 @@ i.icon.arrow.down:before {
     content: "\f063"
 }
 
-i.icon.arrow.left:before {
+i.icon.arrow.leftAlign:before {
     content: "\f060"
 }
 
-i.icon.arrow.right:before {
+i.icon.arrow.rightAlign:before {
     content: "\f061"
 }
 
@@ -6791,11 +6791,11 @@ i.icon.caret.down:before {
     content: "\f0d7"
 }
 
-i.icon.caret.left:before {
+i.icon.caret.leftAlign:before {
     content: "\f0d9"
 }
 
-i.icon.caret.right:before {
+i.icon.caret.rightAlign:before {
     content: "\f0da"
 }
 
@@ -6803,11 +6803,11 @@ i.icon.caret.square.down:before {
     content: "\f150"
 }
 
-i.icon.caret.square.left:before {
+i.icon.caret.square.leftAlign:before {
     content: "\f191"
 }
 
-i.icon.caret.square.right:before {
+i.icon.caret.square.rightAlign:before {
     content: "\f152"
 }
 
@@ -6939,11 +6939,11 @@ i.icon.chevron.circle.down:before {
     content: "\f13a"
 }
 
-i.icon.chevron.circle.left:before {
+i.icon.chevron.circle.leftAlign:before {
     content: "\f137"
 }
 
-i.icon.chevron.circle.right:before {
+i.icon.chevron.circle.rightAlign:before {
     content: "\f138"
 }
 
@@ -6955,11 +6955,11 @@ i.icon.chevron.down:before {
     content: "\f078"
 }
 
-i.icon.chevron.left:before {
+i.icon.chevron.leftAlign:before {
     content: "\f053"
 }
 
-i.icon.chevron.right:before {
+i.icon.chevron.rightAlign:before {
     content: "\f054"
 }
 
@@ -8095,11 +8095,11 @@ i.icon.long.arrow.alternate.down:before {
     content: "\f309"
 }
 
-i.icon.long.arrow.alternate.left:before {
+i.icon.long.arrow.alternate.leftAlign:before {
     content: "\f30a"
 }
 
-i.icon.long.arrow.alternate.right:before {
+i.icon.long.arrow.alternate.rightAlign:before {
     content: "\f30b"
 }
 
@@ -8575,11 +8575,11 @@ i.icon.quora:before {
     content: "\f2c4"
 }
 
-i.icon.quote.left:before {
+i.icon.quote.leftAlign:before {
     content: "\f10d"
 }
 
-i.icon.quote.right:before {
+i.icon.quote.rightAlign:before {
     content: "\f10e"
 }
 
@@ -10335,11 +10335,11 @@ i.icon.pointing.down:before {
     content: "\f0a7"
 }
 
-i.icon.pointing.left:before {
+i.icon.pointing.leftAlign:before {
     content: "\f0a5"
 }
 
-i.icon.pointing.right:before {
+i.icon.pointing.rightAlign:before {
     content: "\f0a4"
 }
 
@@ -10583,11 +10583,11 @@ i.icon.toggle.down:before {
     content: "\f150"
 }
 
-i.icon.toggle.left:before {
+i.icon.toggle.leftAlign:before {
     content: "\f191"
 }
 
-i.icon.toggle.right:before {
+i.icon.toggle.rightAlign:before {
     content: "\f152"
 }
 
@@ -10611,11 +10611,11 @@ i.icon.triangle.down:before {
     content: "\f0d7"
 }
 
-i.icon.triangle.left:before {
+i.icon.triangle.leftAlign:before {
     content: "\f0d9"
 }
 
-i.icon.triangle.right:before {
+i.icon.triangle.rightAlign:before {
     content: "\f0da"
 }
 
@@ -10962,11 +10962,11 @@ i.icon.arrow.alternate.circle.down.outline:before {
     content: "\f358"
 }
 
-i.icon.arrow.alternate.circle.left.outline:before {
+i.icon.arrow.alternate.circle.leftAlign.outline:before {
     content: "\f359"
 }
 
-i.icon.arrow.alternate.circle.right.outline:before {
+i.icon.arrow.alternate.circle.rightAlign.outline:before {
     content: "\f35a"
 }
 
@@ -11018,11 +11018,11 @@ i.icon.caret.square.down.outline:before {
     content: "\f150"
 }
 
-i.icon.caret.square.left.outline:before {
+i.icon.caret.square.leftAlign.outline:before {
     content: "\f191"
 }
 
-i.icon.caret.square.right.outline:before {
+i.icon.caret.square.rightAlign.outline:before {
     content: "\f152"
 }
 
@@ -11194,11 +11194,11 @@ i.icon.hand.point.down.outline:before {
     content: "\f0a7"
 }
 
-i.icon.hand.point.left.outline:before {
+i.icon.hand.point.leftAlign.outline:before {
     content: "\f0a5"
 }
 
-i.icon.hand.point.right.outline:before {
+i.icon.hand.point.rightAlign.outline:before {
     content: "\f0a4"
 }
 
@@ -11565,7 +11565,7 @@ img.ui.image {
     margin-bottom: 1em
 }
 
-.ui.right.floated.image, .ui.right.floated.images {
+.ui.rightAlign.floated.image, .ui.rightAlign.floated.images {
     float: right;
     margin-right: 0;
     margin-bottom: 1em;
@@ -11978,7 +11978,7 @@ img.ui.image {
     right: 1px
 }
 
-.ui.input > .ui.left.corner.label {
+.ui.input > .ui.leftAlign.corner.label {
     right: auto;
     left: 1px
 }
@@ -12174,19 +12174,19 @@ a.ui.label {
     margin-top: -.29165em
 }
 
-.ui.attached.segment > .ui.top.left.attached.label, .ui.bottom.attached.segment > .ui.top.left.attached.label {
+.ui.attached.segment > .ui.top.leftAlign.attached.label, .ui.bottom.attached.segment > .ui.top.leftAlign.attached.label {
     border-top-left-radius: 0
 }
 
-.ui.attached.segment > .ui.top.right.attached.label, .ui.bottom.attached.segment > .ui.top.right.attached.label {
+.ui.attached.segment > .ui.top.rightAlign.attached.label, .ui.bottom.attached.segment > .ui.top.rightAlign.attached.label {
     border-top-right-radius: 0
 }
 
-.ui.top.attached.segment > .ui.bottom.left.attached.label {
+.ui.top.attached.segment > .ui.bottom.leftAlign.attached.label {
     border-bottom-left-radius: 0
 }
 
-.ui.top.attached.segment > .ui.bottom.right.attached.label {
+.ui.top.attached.segment > .ui.bottom.rightAlign.attached.label {
     border-bottom-right-radius: 0
 }
 
@@ -12313,12 +12313,12 @@ a.ui.label {
     margin: 0
 }
 
-.ui.left.corner.label, .ui.left.corner.label:after {
+.ui.leftAlign.corner.label, .ui.leftAlign.corner.label:after {
     right: auto;
     left: 0
 }
 
-.ui.left.corner.label:after {
+.ui.leftAlign.corner.label:after {
     border-top: 4em solid transparent;
     border-right: 4em solid transparent;
     border-bottom: 0 solid transparent;
@@ -12326,7 +12326,7 @@ a.ui.label {
     border-top-color: inherit
 }
 
-.ui.left.corner.label .icon {
+.ui.leftAlign.corner.label .icon {
     left: -.78571429em
 }
 
@@ -14425,28 +14425,28 @@ ol.ui.list li[value]:before {
     height: 100%
 }
 
-.ui.left.rail {
+.ui.leftAlign.rail {
     left: auto;
     right: 100%;
     padding: 0 2rem 0 0;
     margin: 0 2rem 0 0
 }
 
-.ui.right.rail {
+.ui.rightAlign.rail {
     left: 100%;
     right: auto;
     padding: 0 0 0 2rem;
     margin: 0 0 0 2rem
 }
 
-.ui.left.internal.rail {
+.ui.leftAlign.internal.rail {
     left: 0;
     right: auto;
     padding: 0 0 0 2rem;
     margin: 0 0 0 2rem
 }
 
-.ui.right.internal.rail {
+.ui.rightAlign.internal.rail {
     left: auto;
     right: 0;
     padding: 0 2rem 0 0;
@@ -14457,13 +14457,13 @@ ol.ui.list li[value]:before {
     width: 302.5px
 }
 
-.ui.left.dividing.rail {
+.ui.leftAlign.dividing.rail {
     padding: 0 2.5rem 0 0;
     margin: 0 2.5rem 0 0;
     border-right: 1px solid rgba(34, 36, 38, .15)
 }
 
-.ui.right.dividing.rail {
+.ui.rightAlign.dividing.rail {
     border-left: 1px solid rgba(34, 36, 38, .15);
     padding: 0 0 0 2.5rem;
     margin: 0 0 0 2.5rem
@@ -14473,12 +14473,12 @@ ol.ui.list li[value]:before {
     width: calc(300px + 1em)
 }
 
-.ui.close.left.rail {
+.ui.close.leftAlign.rail {
     padding: 0 1em 0 0;
     margin: 0 1em 0 0
 }
 
-.ui.close.right.rail {
+.ui.close.rightAlign.rail {
     padding: 0 0 0 1em;
     margin: 0 0 0 1em
 }
@@ -14487,17 +14487,17 @@ ol.ui.list li[value]:before {
     width: calc(300px + .5em)
 }
 
-.ui.very.close.left.rail {
+.ui.very.close.leftAlign.rail {
     padding: 0 .5em 0 0;
     margin: 0 .5em 0 0
 }
 
-.ui.very.close.right.rail {
+.ui.very.close.rightAlign.rail {
     padding: 0 0 0 .5em;
     margin: 0 0 0 .5em
 }
 
-.ui.attached.left.rail, .ui.attached.right.rail {
+.ui.attached.leftAlign.rail, .ui.attached.rightAlign.rail {
     padding: 0;
     margin: 0
 }
@@ -14607,22 +14607,22 @@ ol.ui.list li[value]:before {
     transform: translateX(0) !important
 }
 
-.ui.slide.right.reveal > .visible.content {
+.ui.slide.rightAlign.reveal > .visible.content {
     -webkit-transform: translateX(0) !important;
     transform: translateX(0) !important
 }
 
-.ui.slide.right.reveal > .hidden.content {
+.ui.slide.rightAlign.reveal > .hidden.content {
     -webkit-transform: translateX(-100%) !important;
     transform: translateX(-100%) !important
 }
 
-.ui.slide.right.active.reveal > .visible.content, .ui.slide.right.reveal:hover > .visible.content {
+.ui.slide.rightAlign.active.reveal > .visible.content, .ui.slide.rightAlign.reveal:hover > .visible.content {
     -webkit-transform: translateX(100%) !important;
     transform: translateX(100%) !important
 }
 
-.ui.slide.right.active.reveal > .hidden.content, .ui.slide.right.reveal:hover > .hidden.content {
+.ui.slide.rightAlign.active.reveal > .hidden.content, .ui.slide.rightAlign.reveal:hover > .hidden.content {
     -webkit-transform: translateX(0) !important;
     transform: translateX(0) !important
 }
@@ -14697,7 +14697,7 @@ ol.ui.list li[value]:before {
     transform: translateX(-100%) !important
 }
 
-.ui.move.right.active.reveal > .visible.content, .ui.move.right.reveal:hover > .visible.content {
+.ui.move.rightAlign.active.reveal > .visible.content, .ui.move.rightAlign.reveal:hover > .visible.content {
     -webkit-transform: translateX(100%) !important;
     transform: translateX(100%) !important
 }
@@ -14719,22 +14719,22 @@ ol.ui.list li[value]:before {
     transform: rotate(0)
 }
 
-.ui.rotate.reveal > .visible.content, .ui.rotate.right.reveal > .visible.content {
+.ui.rotate.reveal > .visible.content, .ui.rotate.rightAlign.reveal > .visible.content {
     -webkit-transform-origin: bottom right;
     transform-origin: bottom right
 }
 
-.ui.rotate.active.reveal > .visible.content, .ui.rotate.reveal:hover > .visible.content, .ui.rotate.right.active.reveal > .visible.content, .ui.rotate.right.reveal:hover > .visible.content {
+.ui.rotate.active.reveal > .visible.content, .ui.rotate.reveal:hover > .visible.content, .ui.rotate.rightAlign.active.reveal > .visible.content, .ui.rotate.rightAlign.reveal:hover > .visible.content {
     -webkit-transform: rotate(110deg);
     transform: rotate(110deg)
 }
 
-.ui.rotate.left.reveal > .visible.content {
+.ui.rotate.leftAlign.reveal > .visible.content {
     -webkit-transform-origin: bottom left;
     transform-origin: bottom left
 }
 
-.ui.rotate.left.active.reveal > .visible.content, .ui.rotate.left.reveal:hover > .visible.content {
+.ui.rotate.leftAlign.active.reveal > .visible.content, .ui.rotate.leftAlign.reveal:hover > .visible.content {
     -webkit-transform: rotate(-110deg);
     transform: rotate(-110deg)
 }
@@ -18725,7 +18725,7 @@ ol.ui.list li[value]:before {
 }
 
 @media only screen and (min-width: 768px) {
-    .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .item:not(.right):not(.borderless):first-child {
+    .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .item:not(.rightAlign):not(.borderless):first-child {
         border-left: 1px solid rgba(34, 36, 38, .1)
     }
 }
@@ -18764,21 +18764,21 @@ ol.ui.list li[value]:before {
     color: rgba(40, 40, 40, .3) !important
 }
 
-.ui.menu:not(.vertical) .left.item, .ui.menu:not(.vertical) :not(.dropdown) > .left.menu {
+.ui.menu:not(.vertical) .leftAlign.item, .ui.menu:not(.vertical) :not(.dropdown) > .leftAlign.menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-right: auto !important
 }
 
-.ui.menu:not(.vertical) .right.item, .ui.menu:not(.vertical) .right.menu {
+.ui.menu:not(.vertical) .rightAlign.item, .ui.menu:not(.vertical) .rightAlign.menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-left: auto !important
 }
 
-.ui.menu .right.item::before, .ui.menu .right.menu > .item::before {
+.ui.menu .rightAlign.item::before, .ui.menu .rightAlign.menu > .item::before {
     right: auto;
     left: 0
 }
@@ -18995,7 +18995,7 @@ ol.ui.list li[value]:before {
     border-radius: .28571429rem 0 0 .28571429rem !important
 }
 
-.ui.vertical.right.tabular.menu {
+.ui.vertical.rightAlign.tabular.menu {
     background: none transparent;
     border-radius: 0;
     -webkit-box-shadow: none !important;
@@ -19005,7 +19005,7 @@ ol.ui.list li[value]:before {
     border-left: 1px solid #d4d4d5
 }
 
-.ui.vertical.right.tabular.menu .item {
+.ui.vertical.rightAlign.tabular.menu .item {
     background: 0 0;
     border-right: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -19013,7 +19013,7 @@ ol.ui.list li[value]:before {
     border-left: none
 }
 
-.ui.vertical.right.tabular.menu .active.item {
+.ui.vertical.rightAlign.tabular.menu .active.item {
     background: none #fff;
     color: rgba(0, 0, 0, .95);
     border-color: #d4d4d5;
@@ -19485,15 +19485,15 @@ ol.ui.list li[value]:before {
         background: rgba(34, 36, 38, .1)
     }
 
-    .ui.stackable.menu .left.item, .ui.stackable.menu .left.menu {
+    .ui.stackable.menu .leftAlign.item, .ui.stackable.menu .leftAlign.menu {
         margin-right: 0 !important
     }
 
-    .ui.stackable.menu .right.item, .ui.stackable.menu .right.menu {
+    .ui.stackable.menu .rightAlign.item, .ui.stackable.menu .rightAlign.menu {
         margin-left: 0 !important
     }
 
-    .ui.stackable.menu .left.menu, .ui.stackable.menu .right.menu {
+    .ui.stackable.menu .leftAlign.menu, .ui.stackable.menu .rightAlign.menu {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -19651,7 +19651,7 @@ ol.ui.list li[value]:before {
     display: none
 }
 
-.ui.right.floated.menu {
+.ui.rightAlign.floated.menu {
     float: right;
     margin: 0 0 0 .5rem
 }
@@ -24969,7 +24969,7 @@ body.dimmable > .dimmer {
     border-left: none
 }
 
-.ui.buttons > .ui.dropdown:last-child .menu, .ui.menu .right.dropdown.item .menu, .ui.menu .right.menu .dropdown:last-child .menu {
+.ui.buttons > .ui.dropdown:last-child .menu, .ui.menu .rightAlign.dropdown.item .menu, .ui.menu .rightAlign.menu .dropdown:last-child .menu {
     left: auto;
     right: 0
 }
@@ -25530,37 +25530,37 @@ select.ui.dropdown {
     left: 0
 }
 
-.ui.dropdown .menu .right.menu, .ui.dropdown .right.menu > .menu {
+.ui.dropdown .menu .rightAlign.menu, .ui.dropdown .rightAlign.menu > .menu {
     left: 100% !important;
     right: auto !important;
     border-radius: .28571429rem !important
 }
 
-.ui.dropdown > .left.menu {
+.ui.dropdown > .leftAlign.menu {
     left: auto !important;
     right: 0 !important
 }
 
-.ui.dropdown .menu .left.menu, .ui.dropdown > .left.menu .menu {
+.ui.dropdown .menu .leftAlign.menu, .ui.dropdown > .leftAlign.menu .menu {
     left: auto;
     right: 100%;
     margin: 0 -.5em 0 0 !important;
     border-radius: .28571429rem !important
 }
 
-.ui.dropdown .item .left.dropdown.icon, .ui.dropdown .left.menu .item .dropdown.icon {
+.ui.dropdown .item .leftAlign.dropdown.icon, .ui.dropdown .leftAlign.menu .item .dropdown.icon {
     width: auto;
     float: left;
     margin: 0
 }
 
-.ui.dropdown .item .left.dropdown.icon, .ui.dropdown .left.menu .item .dropdown.icon {
+.ui.dropdown .item .leftAlign.dropdown.icon, .ui.dropdown .leftAlign.menu .item .dropdown.icon {
     width: auto;
     float: left;
     margin: 0
 }
 
-.ui.dropdown .item .left.dropdown.icon + .text, .ui.dropdown .left.menu .item .dropdown.icon + .text {
+.ui.dropdown .item .leftAlign.dropdown.icon + .text, .ui.dropdown .leftAlign.menu .item .dropdown.icon + .text {
     margin-left: 1em;
     margin-right: 0
 }
@@ -25788,7 +25788,7 @@ select.ui.dropdown {
     margin: 0 0 0 -.25em
 }
 
-.ui.top.left.pointing.dropdown > .menu {
+.ui.top.leftAlign.pointing.dropdown > .menu {
     top: 100%;
     bottom: auto;
     left: 0;
@@ -25796,7 +25796,7 @@ select.ui.dropdown {
     margin: 1em 0 0
 }
 
-.ui.top.left.pointing.dropdown > .menu {
+.ui.top.leftAlign.pointing.dropdown > .menu {
     top: 100%;
     bottom: auto;
     left: 0;
@@ -25804,7 +25804,7 @@ select.ui.dropdown {
     margin: 1em 0 0
 }
 
-.ui.top.left.pointing.dropdown > .menu:after {
+.ui.top.leftAlign.pointing.dropdown > .menu:after {
     top: -.25em;
     left: 1em;
     right: auto;
@@ -25813,7 +25813,7 @@ select.ui.dropdown {
     transform: rotate(45deg)
 }
 
-.ui.top.right.pointing.dropdown > .menu {
+.ui.top.rightAlign.pointing.dropdown > .menu {
     top: 100%;
     bottom: auto;
     right: 0;
@@ -25821,7 +25821,7 @@ select.ui.dropdown {
     margin: 1em 0 0
 }
 
-.ui.top.pointing.dropdown > .left.menu:after, .ui.top.right.pointing.dropdown > .menu:after {
+.ui.top.pointing.dropdown > .leftAlign.menu:after, .ui.top.rightAlign.pointing.dropdown > .menu:after {
     top: -.25em;
     left: auto !important;
     right: 1em !important;
@@ -25830,14 +25830,14 @@ select.ui.dropdown {
     transform: rotate(45deg)
 }
 
-.ui.left.pointing.dropdown > .menu {
+.ui.leftAlign.pointing.dropdown > .menu {
     top: 0;
     left: 100%;
     right: auto;
     margin: 0 0 0 1em
 }
 
-.ui.left.pointing.dropdown > .menu:after {
+.ui.leftAlign.pointing.dropdown > .menu:after {
     top: 1em;
     left: -.25em;
     margin: 0;
@@ -25845,13 +25845,13 @@ select.ui.dropdown {
     transform: rotate(-45deg)
 }
 
-.ui.left:not(.top):not(.bottom).pointing.dropdown > .left.menu {
+.ui.leftAlign:not(.top):not(.bottom).pointing.dropdown > .leftAlign.menu {
     left: auto !important;
     right: 100% !important;
     margin: 0 1em 0 0
 }
 
-.ui.left:not(.top):not(.bottom).pointing.dropdown > .left.menu:after {
+.ui.leftAlign:not(.top):not(.bottom).pointing.dropdown > .leftAlign.menu:after {
     top: 1em;
     left: auto;
     right: -.25em;
@@ -25860,14 +25860,14 @@ select.ui.dropdown {
     transform: rotate(135deg)
 }
 
-.ui.right.pointing.dropdown > .menu {
+.ui.rightAlign.pointing.dropdown > .menu {
     top: 0;
     left: auto;
     right: 100%;
     margin: 0 1em 0 0
 }
 
-.ui.right.pointing.dropdown > .menu:after {
+.ui.rightAlign.pointing.dropdown > .menu:after {
     top: 1em;
     left: auto;
     right: -.25em;
@@ -25898,22 +25898,22 @@ select.ui.dropdown {
     bottom: 0 !important
 }
 
-.ui.bottom.left.pointing.dropdown > .menu {
+.ui.bottom.leftAlign.pointing.dropdown > .menu {
     left: 0;
     right: auto
 }
 
-.ui.bottom.left.pointing.dropdown > .menu:after {
+.ui.bottom.leftAlign.pointing.dropdown > .menu:after {
     left: 1em;
     right: auto
 }
 
-.ui.bottom.right.pointing.dropdown > .menu {
+.ui.bottom.rightAlign.pointing.dropdown > .menu {
     right: 0;
     left: auto
 }
 
-.ui.bottom.right.pointing.dropdown > .menu:after {
+.ui.bottom.rightAlign.pointing.dropdown > .menu:after {
     left: auto;
     right: 1em
 }
@@ -25933,13 +25933,13 @@ select.ui.dropdown {
     margin: -.25em 0 0
 }
 
-.ui.right.pointing.upward.dropdown:not(.top):not(.bottom) .menu {
+.ui.rightAlign.pointing.upward.dropdown:not(.top):not(.bottom) .menu {
     top: auto !important;
     bottom: 0 !important;
     margin: 0 1em 0 0
 }
 
-.ui.right.pointing.upward.dropdown:not(.top):not(.bottom) .menu:after {
+.ui.rightAlign.pointing.upward.dropdown:not(.top):not(.bottom) .menu:after {
     top: auto !important;
     bottom: 0 !important;
     margin: 0 0 1em 0;
@@ -25947,13 +25947,13 @@ select.ui.dropdown {
     box-shadow: -1px -1px 0 0 rgba(34, 36, 38, .15)
 }
 
-.ui.left.pointing.upward.dropdown:not(.top):not(.bottom) .menu {
+.ui.leftAlign.pointing.upward.dropdown:not(.top):not(.bottom) .menu {
     top: auto !important;
     bottom: 0 !important;
     margin: 0 0 0 1em
 }
 
-.ui.left.pointing.upward.dropdown:not(.top):not(.bottom) .menu:after {
+.ui.leftAlign.pointing.upward.dropdown:not(.top):not(.bottom) .menu:after {
     top: auto !important;
     bottom: 0 !important;
     margin: 0 0 1em 0;
@@ -25992,7 +25992,7 @@ select.ui.dropdown {
     content: '\f0da'
 }
 
-.ui.dropdown .item .left.dropdown.icon:before, .ui.dropdown .left.menu .item .dropdown.icon:before {
+.ui.dropdown .item .leftAlign.dropdown.icon:before, .ui.dropdown .leftAlign.menu .item .dropdown.icon:before {
     content: "\f0d9"
 }
 
@@ -27200,7 +27200,7 @@ a.ui.nag {
     margin: 0 0 .71428571em
 }
 
-.ui.top.left.popup {
+.ui.top.leftAlign.popup {
     -webkit-transform-origin: left bottom;
     transform-origin: left bottom
 }
@@ -27210,18 +27210,18 @@ a.ui.nag {
     transform-origin: center bottom
 }
 
-.ui.top.right.popup {
+.ui.top.rightAlign.popup {
     -webkit-transform-origin: right bottom;
     transform-origin: right bottom
 }
 
-.ui.left.center.popup {
+.ui.leftAlign.center.popup {
     margin: 0 .71428571em 0 0;
     -webkit-transform-origin: right 50%;
     transform-origin: right 50%
 }
 
-.ui.right.center.popup {
+.ui.rightAlign.center.popup {
     margin: 0 0 0 .71428571em;
     -webkit-transform-origin: left 50%;
     transform-origin: left 50%
@@ -27231,7 +27231,7 @@ a.ui.nag {
     margin: .71428571em 0 0
 }
 
-.ui.bottom.left.popup {
+.ui.bottom.leftAlign.popup {
     -webkit-transform-origin: left top;
     transform-origin: left top
 }
@@ -27241,7 +27241,7 @@ a.ui.nag {
     transform-origin: center top
 }
 
-.ui.bottom.right.popup {
+.ui.bottom.rightAlign.popup {
     -webkit-transform-origin: right top;
     transform-origin: right top
 }
@@ -27256,11 +27256,11 @@ a.ui.nag {
     box-shadow: -1px -1px 0 0 #bababc
 }
 
-.ui.bottom.left.popup {
+.ui.bottom.leftAlign.popup {
     margin-left: 0
 }
 
-.ui.bottom.left.popup:before {
+.ui.bottom.leftAlign.popup:before {
     top: -.30714286em;
     left: 1em;
     right: auto;
@@ -27270,11 +27270,11 @@ a.ui.nag {
     box-shadow: -1px -1px 0 0 #bababc
 }
 
-.ui.bottom.right.popup {
+.ui.bottom.rightAlign.popup {
     margin-right: 0
 }
 
-.ui.bottom.right.popup:before {
+.ui.bottom.rightAlign.popup:before {
     top: -.30714286em;
     right: 1em;
     bottom: auto;
@@ -27292,11 +27292,11 @@ a.ui.nag {
     margin-left: -.30714286em
 }
 
-.ui.top.left.popup {
+.ui.top.leftAlign.popup {
     margin-left: 0
 }
 
-.ui.top.left.popup:before {
+.ui.top.leftAlign.popup:before {
     bottom: -.30714286em;
     left: 1em;
     top: auto;
@@ -27304,11 +27304,11 @@ a.ui.nag {
     margin-left: 0
 }
 
-.ui.top.right.popup {
+.ui.top.rightAlign.popup {
     margin-right: 0
 }
 
-.ui.top.right.popup:before {
+.ui.top.rightAlign.popup:before {
     bottom: -.30714286em;
     right: 1em;
     top: auto;
@@ -27316,7 +27316,7 @@ a.ui.nag {
     margin-left: 0
 }
 
-.ui.left.center.popup:before {
+.ui.leftAlign.center.popup:before {
     top: 50%;
     right: -.30714286em;
     bottom: auto;
@@ -27326,7 +27326,7 @@ a.ui.nag {
     box-shadow: 1px -1px 0 0 #bababc
 }
 
-.ui.right.center.popup:before {
+.ui.rightAlign.center.popup:before {
     top: 50%;
     left: -.30714286em;
     bottom: auto;
@@ -27340,7 +27340,7 @@ a.ui.nag {
     background: #fff
 }
 
-.ui.left.center.popup:before, .ui.right.center.popup:before {
+.ui.leftAlign.center.popup:before, .ui.rightAlign.center.popup:before {
     background: #fff
 }
 
@@ -27352,7 +27352,7 @@ a.ui.nag {
     background: #1b1c1d
 }
 
-.ui.inverted.left.center.popup:before, .ui.inverted.right.center.popup:before {
+.ui.inverted.leftAlign.center.popup:before, .ui.inverted.rightAlign.center.popup:before {
     background: #1b1c1d
 }
 
@@ -28589,14 +28589,14 @@ a.ui.nag {
     backface-visibility: hidden
 }
 
-.ui.left.sidebar {
+.ui.leftAlign.sidebar {
     right: auto;
     left: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0)
 }
 
-.ui.right.sidebar {
+.ui.rightAlign.sidebar {
     right: 0 !important;
     left: auto !important;
     -webkit-transform: translate3d(100%, 0, 0);
@@ -28708,7 +28708,7 @@ body.pushable > .pusher {
     transform: translate3d(0, 0, 0)
 }
 
-.ui.left.visible.sidebar, .ui.right.visible.sidebar {
+.ui.leftAlign.visible.sidebar, .ui.rightAlign.visible.sidebar {
     -webkit-box-shadow: 0 0 20px rgba(34, 36, 38, .15);
     box-shadow: 0 0 20px rgba(34, 36, 38, .15)
 }
@@ -28718,12 +28718,12 @@ body.pushable > .pusher {
     box-shadow: 0 0 20px rgba(34, 36, 38, .15)
 }
 
-.ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {
+.ui.visible.leftAlign.sidebar ~ .fixed, .ui.visible.leftAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(260px, 0, 0);
     transform: translate3d(260px, 0, 0)
 }
 
-.ui.visible.right.sidebar ~ .fixed, .ui.visible.right.sidebar ~ .pusher {
+.ui.visible.rightAlign.sidebar ~ .fixed, .ui.visible.rightAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(-260px, 0, 0);
     transform: translate3d(-260px, 0, 0)
 }
@@ -28738,67 +28738,67 @@ body.pushable > .pusher {
     transform: translate3d(0, -36px, 0)
 }
 
-.ui.visible.left.sidebar ~ .ui.visible.right.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .ui.visible.right.sidebar ~ .pusher, .ui.visible.right.sidebar ~ .ui.visible.left.sidebar ~ .fixed, .ui.visible.right.sidebar ~ .ui.visible.left.sidebar ~ .pusher {
+.ui.visible.leftAlign.sidebar ~ .ui.visible.rightAlign.sidebar ~ .fixed, .ui.visible.leftAlign.sidebar ~ .ui.visible.rightAlign.sidebar ~ .pusher, .ui.visible.rightAlign.sidebar ~ .ui.visible.leftAlign.sidebar ~ .fixed, .ui.visible.rightAlign.sidebar ~ .ui.visible.leftAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
 }
 
-.ui.thin.left.sidebar, .ui.thin.right.sidebar {
+.ui.thin.leftAlign.sidebar, .ui.thin.rightAlign.sidebar {
     width: 150px
 }
 
-.ui[class*="very thin"].left.sidebar, .ui[class*="very thin"].right.sidebar {
+.ui[class*="very thin"].leftAlign.sidebar, .ui[class*="very thin"].rightAlign.sidebar {
     width: 60px
 }
 
-.ui.left.sidebar, .ui.right.sidebar {
+.ui.leftAlign.sidebar, .ui.rightAlign.sidebar {
     width: 260px
 }
 
-.ui.wide.left.sidebar, .ui.wide.right.sidebar {
+.ui.wide.leftAlign.sidebar, .ui.wide.rightAlign.sidebar {
     width: 350px
 }
 
-.ui[class*="very wide"].left.sidebar, .ui[class*="very wide"].right.sidebar {
+.ui[class*="very wide"].leftAlign.sidebar, .ui[class*="very wide"].rightAlign.sidebar {
     width: 475px
 }
 
-.ui.visible.thin.left.sidebar ~ .fixed, .ui.visible.thin.left.sidebar ~ .pusher {
+.ui.visible.thin.leftAlign.sidebar ~ .fixed, .ui.visible.thin.leftAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(150px, 0, 0);
     transform: translate3d(150px, 0, 0)
 }
 
-.ui.visible[class*="very thin"].left.sidebar ~ .fixed, .ui.visible[class*="very thin"].left.sidebar ~ .pusher {
+.ui.visible[class*="very thin"].leftAlign.sidebar ~ .fixed, .ui.visible[class*="very thin"].leftAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(60px, 0, 0);
     transform: translate3d(60px, 0, 0)
 }
 
-.ui.visible.wide.left.sidebar ~ .fixed, .ui.visible.wide.left.sidebar ~ .pusher {
+.ui.visible.wide.leftAlign.sidebar ~ .fixed, .ui.visible.wide.leftAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(350px, 0, 0);
     transform: translate3d(350px, 0, 0)
 }
 
-.ui.visible[class*="very wide"].left.sidebar ~ .fixed, .ui.visible[class*="very wide"].left.sidebar ~ .pusher {
+.ui.visible[class*="very wide"].leftAlign.sidebar ~ .fixed, .ui.visible[class*="very wide"].leftAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(475px, 0, 0);
     transform: translate3d(475px, 0, 0)
 }
 
-.ui.visible.thin.right.sidebar ~ .fixed, .ui.visible.thin.right.sidebar ~ .pusher {
+.ui.visible.thin.rightAlign.sidebar ~ .fixed, .ui.visible.thin.rightAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(-150px, 0, 0);
     transform: translate3d(-150px, 0, 0)
 }
 
-.ui.visible[class*="very thin"].right.sidebar ~ .fixed, .ui.visible[class*="very thin"].right.sidebar ~ .pusher {
+.ui.visible[class*="very thin"].rightAlign.sidebar ~ .fixed, .ui.visible[class*="very thin"].rightAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(-60px, 0, 0);
     transform: translate3d(-60px, 0, 0)
 }
 
-.ui.visible.wide.right.sidebar ~ .fixed, .ui.visible.wide.right.sidebar ~ .pusher {
+.ui.visible.wide.rightAlign.sidebar ~ .fixed, .ui.visible.wide.rightAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(-350px, 0, 0);
     transform: translate3d(-350px, 0, 0)
 }
 
-.ui.visible[class*="very wide"].right.sidebar ~ .fixed, .ui.visible[class*="very wide"].right.sidebar ~ .pusher {
+.ui.visible[class*="very wide"].rightAlign.sidebar ~ .fixed, .ui.visible[class*="very wide"].rightAlign.sidebar ~ .pusher {
     -webkit-transform: translate3d(-475px, 0, 0);
     transform: translate3d(-475px, 0, 0)
 }
@@ -28807,12 +28807,12 @@ body.pushable > .pusher {
     z-index: 102
 }
 
-.ui.left.overlay.sidebar {
+.ui.leftAlign.overlay.sidebar {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0)
 }
 
-.ui.right.overlay.sidebar {
+.ui.rightAlign.overlay.sidebar {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)
 }
@@ -28834,12 +28834,12 @@ body.pushable > .pusher {
     transition: transform .5s ease, -webkit-transform .5s ease
 }
 
-.ui.visible.left.overlay.sidebar {
+.ui.visible.leftAlign.overlay.sidebar {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
 }
 
-.ui.visible.right.overlay.sidebar {
+.ui.visible.rightAlign.overlay.sidebar {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
 }
@@ -28867,12 +28867,12 @@ body.pushable > .pusher {
     z-index: 102
 }
 
-.ui.left.push.sidebar {
+.ui.leftAlign.push.sidebar {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0)
 }
 
-.ui.right.push.sidebar {
+.ui.rightAlign.push.sidebar {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)
 }
@@ -28911,12 +28911,12 @@ body.pushable > .pusher {
     z-index: 1
 }
 
-.ui.left.slide.along.sidebar {
+.ui.leftAlign.slide.along.sidebar {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0)
 }
 
-.ui.right.slide.along.sidebar {
+.ui.rightAlign.slide.along.sidebar {
     -webkit-transform: translate3d(50%, 0, 0);
     transform: translate3d(50%, 0, 0)
 }
@@ -28947,12 +28947,12 @@ body.pushable > .pusher {
     z-index: 1
 }
 
-.ui.left.slide.out.sidebar {
+.ui.leftAlign.slide.out.sidebar {
     -webkit-transform: translate3d(50%, 0, 0);
     transform: translate3d(50%, 0, 0)
 }
 
-.ui.right.slide.out.sidebar {
+.ui.rightAlign.slide.out.sidebar {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0)
 }
@@ -28987,12 +28987,12 @@ body.pushable > .pusher {
     z-index: 102
 }
 
-.ui.left.scale.down.sidebar {
+.ui.leftAlign.scale.down.sidebar {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0)
 }
 
-.ui.right.scale.down.sidebar {
+.ui.rightAlign.scale.down.sidebar {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)
 }
@@ -29007,12 +29007,12 @@ body.pushable > .pusher {
     transform: translate3d(0, 100%, 0)
 }
 
-.ui.scale.down.left.sidebar ~ .pusher {
+.ui.scale.down.leftAlign.sidebar ~ .pusher {
     -webkit-transform-origin: 75% 50%;
     transform-origin: 75% 50%
 }
 
-.ui.scale.down.right.sidebar ~ .pusher {
+.ui.scale.down.rightAlign.sidebar ~ .pusher {
     -webkit-transform-origin: 25% 50%;
     transform-origin: 25% 50%
 }
@@ -29220,12 +29220,12 @@ body.pushable > .pusher {
     animation-name: browseIn
 }
 
-.transition.browse.left.out, .transition.browse.out {
+.transition.browse.leftAlign.out, .transition.browse.out {
     -webkit-animation-name: browseOutLeft;
     animation-name: browseOutLeft
 }
 
-.transition.browse.right.out {
+.transition.browse.rightAlign.out {
     -webkit-animation-name: browseOutRight;
     animation-name: browseOutRight
 }

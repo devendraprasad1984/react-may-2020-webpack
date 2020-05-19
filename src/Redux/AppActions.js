@@ -7,13 +7,16 @@ export const todoActions = () => {
     const delTodo = (index) => {
         return {type: enums.DELETE_TODO, index}
     }
+    const doneTodo = (index) => {
+        return {type: enums.DONE_TODO, index}
+    }
     const completeAllTodo = (index) => {
         return {type: enums.COMPLETE_TODO_ALL, index}
     }
     const undoAllTodo = (index) => {
         return {type: enums.UNDO_TODO_ALL, index}
     }
-    return {addTodo, delTodo, completeAllTodo, undoAllTodo}
+    return {addTodo, delTodo, doneTodo, completeAllTodo, undoAllTodo}
 }
 
 

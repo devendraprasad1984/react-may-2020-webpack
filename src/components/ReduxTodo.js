@@ -4,7 +4,7 @@ import * as allActions from "../Redux/AppActions";
 import * as toasify from "toastr";
 import {enums} from "../Redux/enums";
 
-const ReduxTest = (props) => {
+const ReduxTodo = (props) => {
     let act=allActions.todoActions();
     let {dispatch,TodosReducer}=props;
     let runtimeText=useRef();
@@ -29,6 +29,7 @@ const ReduxTest = (props) => {
         let todos=TodosReducer;
         console.log('inside printing',todos);
         return todos.map((x,i)=><div key={'id_div_'+i} style={{fontSize:'12px',fontWeight:'bolder',lineHeight:'1.1'}}>
+            <button className={x.completed?'btn yellow':'btn green'} disabled={x.completed} onClick={() => doneToDo(i)}><i className="large hand point right outline icon"></i></button>
             <span style={{textDecoration:x.completed?'line-through':'none',width:'500px'}}>{x.text} - {x.completed?'DONE':'Pending'}</span>
             <button className={x.completed?'btn gray right':'btn red right'} disabled={x.completed} onClick={() => deleteToDo(i)}>X</button>
         </div>);
@@ -36,6 +37,10 @@ const ReduxTest = (props) => {
     let deleteToDo=(index)=>{
         dispatch(act.delTodo(index));
         toasify.error('deleted');
+    }
+    let doneToDo=(index)=>{
+        dispatch(act.doneTodo(index));
+        toasify.error('completed');
     }
     let handleInput=(e)=>{
         let {value}=e.target;
@@ -69,12 +74,12 @@ const ReduxTest = (props) => {
 //         todos:state.TodosObject //same as reducer class or function name until you define in combine reducer function call
 //     }
 // }
-// export default connect(mapStateToProps,mapDispatchToProps)(ReduxTest);
+// export default connect(mapStateToProps,mapDispatchToProps)(ReduxTodo);
 
 export default connect((state,ownProps)=>{
     let {TodosReducer}=state; //destructure object from combine reducer functions and thats gonna be the returned object also
     return{
         TodosReducer
     }
-})(ReduxTest);
+})(ReduxTodo);
 

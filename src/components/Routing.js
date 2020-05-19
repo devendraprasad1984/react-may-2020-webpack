@@ -1,18 +1,20 @@
 import React from 'react';
 import {HashRouter, Switch, Route, Link} from 'react-router-dom';
-import  {linksArr} from './globals';
+import {linksArr,linksIcon} from './globals';
 import {Home} from './Home';
-import {Budget,DisplayBudgetForms} from './BudgetForm';
+import {Budget, DisplayBudgetForms} from './BudgetForm';
 import {About} from './About';
 import {NotFound} from './NotFound';
 import {QRApp} from './QR';
 import {PdfCsv} from './PDF_CSV';
-import ReduxTest from "./ReduxTest";
+import ReduxTest from "./ReduxTodo";
 import CounterRedux from "./CounterRedux";
 import ReduxMailExample from "./ReduxMailExample";
 import SimpleHooks from "./SimpleHooks";
+import ReduxPeerJS from "./ReduxPeerJS";
 
 const iconNames = linksArr;
+const icons = linksIcon;
 const handleActive = (e) => {
     let navLinks = Object.values(document.getElementsByClassName('sidenav')[0].children);
     navLinks.map(x => x.className = '');
@@ -22,9 +24,15 @@ const handleActive = (e) => {
 const nav = (curIndex) => {
     return (<div>
         <div className="bg-dark sidenav">
-            {iconNames.map((x, i) => <Link key={'id_key_'+x} to={x} className={i === curIndex ? 'active' : ''} onClick={(e) => {
-                handleActive(e)
-            }}>{x === '/' ? 'Home' : x.replace('/', '')}</Link>)}
+            {iconNames.map((x, i) =>
+                <Link
+                    key={'id_key_' + x}
+                    to={x}
+                    className={i === curIndex ? 'active' : ''}
+                    onClick={(e) => {
+                        handleActive(e)
+                    }}><i className={icons[i]}></i> {x === '/' ? 'Home' : x.replace('/', '')}
+                </Link>)}
         </div>
         {/*{props.children}*/}
     </div>)
@@ -48,6 +56,7 @@ export const SetRouting = () => {
                 <Route path={iconNames[6]}><CounterRedux/></Route>
                 <Route path={iconNames[7]}><ReduxMailExample/></Route>
                 <Route path={iconNames[8]}><SimpleHooks/></Route>
+                <Route path={iconNames[9]}><ReduxPeerJS/></Route>
                 <Route path="*" component={NotFound}/>
             </Switch>
         </div>

@@ -95,8 +95,9 @@ export const Home = () => {
     }
     let testWebbee = () => {
         return workers.map((x, i) =>
-            <div key={'id'+i}>{x.first_name} - {x.last_name} - {x.status}
-                <div className='right'>
+            <div key={'id'+i}>
+                <div className='leftAlign'><h1>{x.first_name} - {x.last_name} - {x.status}</h1></div>
+                <div className='rightAlign'>
                     <button className={x.status==='offline'?'btn red':'btn green'} onClick={() => {
                         changeStatus(x, i)
                     }}>{x.status}
@@ -123,8 +124,8 @@ export const Home = () => {
 
             {semantic_drop_down_check()}
             {promiseCheck()}
-            <div style={{width:'50%'}}>
-                <h1>Webbee First Question Checks</h1>
+            <div style={{width:'70%'}}>
+                <h1>online/offline</h1>
                 {testWebbee()}
             </div>
         </div>
