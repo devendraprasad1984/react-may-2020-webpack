@@ -1,6 +1,6 @@
 import React from 'react';
 import {HashRouter, Switch, Route, Link} from 'react-router-dom';
-import {linksArr,linksIcon} from './globals';
+import {linksArr, linksIcon} from './globals';
 import {Home} from './Home';
 import {Budget, DisplayBudgetForms} from './BudgetForm';
 import {About} from './About';
@@ -12,11 +12,12 @@ import CounterRedux from "./CounterRedux";
 import ReduxMailExample from "./ReduxMailExample";
 import SimpleHooks from "./SimpleHooks";
 import ReduxPeerJS from "./ReduxPeerJS";
+import {PromiseAll} from "./PromiseAll";
 
 const iconNames = linksArr;
 const icons = linksIcon;
 const handleActive = (e) => {
-    let navLinks = Object.values(document.getElementsByClassName('sidenav')[0].children);
+    let navLinks = Object.values(document.getElementsByClassName('sidenav')[0].getElementsByTagName('a'));
     navLinks.map(x => x.className = '');
     let cur = e.target;
     cur.className = 'active';
@@ -25,14 +26,18 @@ const nav = (curIndex) => {
     return (<div>
         <div className="bg-dark sidenav">
             {iconNames.map((x, i) =>
-                <Link
-                    key={'id_key_' + x}
-                    to={x}
-                    className={i === curIndex ? 'active' : ''}
-                    onClick={(e) => {
-                        handleActive(e)
-                    }}><i className={icons[i]}></i> {x === '/' ? 'Home' : x.replace('/', '')}
-                </Link>)}
+                <span key={'navspan'+i}>
+                    <i className={icons[i]}></i>
+                    <Link
+                        key={'id_key_' + x}
+                        to={x}
+                        className={i === curIndex ? 'active' : ''}
+                        onClick={(e) => {
+                            handleActive(e)
+                        }}> {x === '/' ? 'Home' : x.replace('/', '')}
+                    </Link>
+                </span>
+            )}
         </div>
         {/*{props.children}*/}
     </div>)
@@ -57,6 +62,7 @@ export const SetRouting = () => {
                 <Route path={iconNames[7]}><ReduxMailExample/></Route>
                 <Route path={iconNames[8]}><SimpleHooks/></Route>
                 <Route path={iconNames[9]}><ReduxPeerJS/></Route>
+                <Route path={iconNames[10]}><PromiseAll/></Route>
                 <Route path="*" component={NotFound}/>
             </Switch>
         </div>

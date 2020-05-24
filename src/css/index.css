@@ -37,6 +37,17 @@ div button {
     padding: 2px;
 }
 
+.scroll-box{
+    position: relative;
+    overflow: auto;
+    height: 300px;
+    width:100%
+}
+.imgx{
+    width:20px;
+    height:20px;
+}
+
 .ui.dropdown{
     width: 100%;
     height: 30px;
@@ -735,13 +746,20 @@ pre code {
     overflow-x: hidden;
 }
 
+.sidenav span{
+    display: flex;
+}
+
 /* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
+.sidenav a,.sidenav i {
+    padding: 5px;
     text-decoration: none;
     font-size: 14px;
     display: block;
     color:white;
+}
+.sidenav a{
+    min-width: 100px;
 }
 .sidenav a:hover,.sidenav a.active  {
     color: #8a73ff;
@@ -863,3 +881,4 @@ hr {
         padding: unset;
     }
 }
+
