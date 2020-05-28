@@ -1,9 +1,9 @@
-import React,{ useState } from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import * as actions from "../Redux/AppActions";
-import * as toastify from 'toastr';
+import TopHoc from './TopHoc';
 
-const ReduxMailExample = (props) => {
+let ReduxMailExample = (props) => {
     let {mailsList, mailsPanel, listing, selecting} = props;
     let [headerDisplay,setHeaderDisplay]=useState('Inbox');
     let [emailObject,setEmailObject]=useState({id:'',subject:'',email:'',to:'',from:''});
@@ -53,6 +53,7 @@ const ReduxMailExample = (props) => {
         </div>
     )
 }
+
 let mapState = (state, ownProps) => {
     let {MailerListReducer, MailerPanelReducer} = state;
     console.log('MailerReducer', MailerListReducer, MailerPanelReducer);
@@ -72,5 +73,7 @@ let mapDispatch = (dispatch) => {
         , selecting: () => dispatch(act.mailSelection())
     }
 }
-export default connect(mapState, mapDispatch)(ReduxMailExample);
+
+// ReduxMailExample=TopHoc(ReduxMailExample);
+export default connect(mapState, mapDispatch)(TopHoc(ReduxMailExample));
 

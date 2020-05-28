@@ -1,8 +1,9 @@
 import React, {useRef, memo} from 'react';
+import TopHoc from "./TopHoc";
 
 const qr = window.QRCode;
 
-const QRApp=()=> {
+let QRApp=(props)=> {
     let qrdiv = useRef(null);
     let qrInputVal = useRef(null);
     const makeCode = () => {
@@ -20,6 +21,7 @@ const QRApp=()=> {
         // qrcode.clear(); // clear the code.
         // qrcode.makeCode(qrInputValText); // make another code.
     }
+    console.log('global props via top hoc',props.globalProps);
     return (
         <div>
             <h1 className="ribbon">QR Contents</h1>
@@ -33,7 +35,7 @@ const QRApp=()=> {
         </div>
     )
 }
-
-export default memo(QRApp);
+QRApp=TopHoc(QRApp)
+export default QRApp;
 
 

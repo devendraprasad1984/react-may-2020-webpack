@@ -23,6 +23,7 @@ const handleActive = (e) => {
     let cur = e.target;
     cur.className = 'active';
 }
+let navStyle={overflow:'auto',position:'relative',height:'90vh'};
 const nav = (curIndex) => {
     return (<div>
         <div className="bg-dark sidenav">
