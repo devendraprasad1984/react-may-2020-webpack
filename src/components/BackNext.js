@@ -4,9 +4,9 @@ import {Button} from "semantic-ui-react";
 export default function BackNext(props){
     let {index,back,next}=props;
     let style={
-        marginTop:'2rem',
-        borderTop:'2px solid lightgray',
-        paddingTop:'5px'
+        marginBottom:'1rem',
+        paddingBottom:'5px',
+        textAlign:'right'
     }
     return(
         <div style={style}>

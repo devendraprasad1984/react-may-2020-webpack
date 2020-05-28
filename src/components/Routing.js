@@ -5,7 +5,7 @@ import {Home} from './Home';
 import {Budget, DisplayBudgetForms} from './BudgetForm';
 import {About} from './About';
 import {NotFound} from './NotFound';
-import {QRApp} from './QR';
+import QRApp from './QR';
 import {PdfCsv} from './PDF_CSV';
 import ReduxTest from "./ReduxTodo";
 import CounterRedux from "./CounterRedux";

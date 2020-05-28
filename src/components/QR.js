@@ -1,7 +1,8 @@
-import React, {useRef} from 'react';
-const qr=window.QRCode;
+import React, {useRef, memo} from 'react';
 
-export const QRApp = () => {
+const qr = window.QRCode;
+
+const QRApp=()=> {
     let qrdiv = useRef(null);
     let qrInputVal = useRef(null);
     const makeCode = () => {
@@ -22,7 +23,6 @@ export const QRApp = () => {
     return (
         <div>
             <h1 className="ribbon">QR Contents</h1>
-            <hr/>
             <div>
                 <button className="btn black" onClick={() => makeCode()}>Generate Code</button>
                 <div><input className="w3-input" type="text" id='qrInputVal' placeholder="enter text here"
@@ -33,3 +33,7 @@ export const QRApp = () => {
         </div>
     )
 }
+
+export default memo(QRApp);
+
+
