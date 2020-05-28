@@ -1,6 +1,11 @@
 import {useState, useEffect} from "react";
 
-export const linksArr = ['/', '/budget', '/about', '/qr', '/pdf_csv', '/redux-todo', '/redux-counter', '/redux-mail', '/simple-hooks', '/peerJs', '/Promise.All'];
+export const linksArr = ['/', '/budget'
+    , '/about', '/qr', '/pdf_csv', '/redux-todo'
+    , '/redux-counter', '/redux-mail'
+    , '/simple-hooks', '/peerJs', '/Promise.All'
+    ,'/Memoization'
+];
 export const linksIcon = [
     'large home icon'
     ,'large hand point right icon'
@@ -13,6 +18,7 @@ export const linksIcon = [
     ,'large code icon'
     ,'large comment icon'
     ,'large at icon'
+    ,'large sitemap icon'
 ];
 export const forms = {
     names: ['Project Details', 'Capex/Revx', 'Costs', 'Benefits'],

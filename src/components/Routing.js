@@ -13,6 +13,7 @@ import ReduxMailExample from "./ReduxMailExample";
 import SimpleHooks from "./SimpleHooks";
 import ReduxPeerJS from "./ReduxPeerJS";
 import {PromiseAll} from "./PromiseAll";
+import {StateMemo} from "./StateMemo";
 
 const iconNames = linksArr;
 const icons = linksIcon;
@@ -63,6 +64,7 @@ export const SetRouting = () => {
                 <Route path={iconNames[8]}><SimpleHooks/></Route>
                 <Route path={iconNames[9]}><ReduxPeerJS/></Route>
                 <Route path={iconNames[10]}><PromiseAll/></Route>
+                <Route path={iconNames[11]}><StateMemo/></Route>
                 <Route path="*" component={NotFound}/>
             </Switch>
         </div>
