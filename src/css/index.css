@@ -896,3 +896,31 @@ hr {
     background-color: aliceblue;
     margin-bottom: 1rem;
 }
+
+
+.openFile {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+.openFile input.open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#editor {
+    font-weight: bolder;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    font-size: 14px;
+    overflow: auto;
+}

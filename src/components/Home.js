@@ -1,6 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react';
 import {Dropdown} from "semantic-ui-react";
 import {success, error, warning} from 'toastr';
+import {CodeEditor} from "./CodeEditor";
 
 export const Home = () => {
     const mform = useRef(null);
@@ -128,6 +129,8 @@ export const Home = () => {
                 <h1>online/offline</h1>
                 {testWebbee()}
             </div>
+
+            <CodeEditor/>
         </div>
     )
 }
