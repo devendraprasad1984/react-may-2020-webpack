@@ -130,7 +130,7 @@ export const Home = () => {
                 {testWebbee()}
             </div>
 
-            <CodeEditor files='Home,TopHoc,Routing'/>
+            <CodeEditor/>
         </div>
     )
 }

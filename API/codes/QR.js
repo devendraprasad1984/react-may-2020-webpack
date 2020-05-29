@@ -1,6 +1,5 @@
 import React, {useRef, memo} from 'react';
 import TopHoc from "./TopHoc";
-import {CodeEditor} from "./CodeEditor";
 
 const qr = window.QRCode;
 
@@ -33,8 +32,6 @@ let QRApp=(props)=> {
                 <br/>
             </div>
             <div id='qrdiv' ref={qrdiv}></div>
-
-            <CodeEditor files='QR'/>
         </div>
     )
 }

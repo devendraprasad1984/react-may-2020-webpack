@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {CodeEditor} from "./CodeEditor";
 const pdf=window.jsPDF;
 
 export const PdfCsv = () => {
@@ -65,8 +64,6 @@ export const PdfCsv = () => {
             <div>
                 {displayRows()}
             </div>
-
-            <CodeEditor files='PDF_CSV'/>
         </div>
     )
 }

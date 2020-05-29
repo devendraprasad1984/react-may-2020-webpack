@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import * as actions from "../Redux/AppActions";
 import TopHoc from './TopHoc';
-import {CodeEditor} from "./CodeEditor";
 
 let ReduxMailExample = (props) => {
     let {mailsList, mailsPanel, listing, selecting} = props;
@@ -51,8 +50,6 @@ let ReduxMailExample = (props) => {
                     {displayEmailSection()}
                 </div>
             </div>
-
-            <CodeEditor files='ReduxMailExample'/>
         </div>
     )
 }

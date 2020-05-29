@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Loader from "./Loader";
 import {Divider} from "semantic-ui-react";
-import {CodeEditor} from "./CodeEditor";
 
 const getFromApi = (url) => {
     return fetch(url).then(res => res.json());
@@ -62,8 +61,6 @@ export const PromiseAll = () => {
             <div className='scroll-box'>{displayAlbums()}</div>
             <h2 style={lineStyle}>Users</h2>
             <div className='scroll-box'>{displayUsers()}</div>
-
-            <CodeEditor files='PromiseAll'/>
         </div>
     )
 }

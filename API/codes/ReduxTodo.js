@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import * as allActions from "../Redux/AppActions";
 import * as toasify from "toastr";
 import {enums} from "../Redux/enums";
-import {CodeEditor} from "./CodeEditor";
 
 const ReduxTodo = (props) => {
     let act=allActions.todoActions();
@@ -67,9 +66,6 @@ const ReduxTodo = (props) => {
             </div>
             <h1>todo listing...</h1>
             {printListing()}
-
-
-            <CodeEditor files='ReduxTodo'/>
         </div>
     )
 }

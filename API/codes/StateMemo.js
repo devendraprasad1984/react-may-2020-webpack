@@ -4,7 +4,6 @@ import ReduxTodo from "./ReduxTodo";
 import BackNext from "./BackNext";
 import ReduxMailExample from "./ReduxMailExample";
 import QRApp from "./QR";
-import {CodeEditor} from "./CodeEditor";
 
 export const StateMemo = () => {
     const [activeIndex, setActiveIndex] = useState(0);

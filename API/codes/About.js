@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {CodeEditor} from "./CodeEditor";
 
 export const About = () => {
     let [users, setUsers] = useState([]);
@@ -42,8 +41,6 @@ export const About = () => {
                 }}>Reset</button>
             </div>
             {users}
-
-            <CodeEditor files='About'/>
         </div>
     )
 }

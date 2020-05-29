@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import {useFetch} from "./globals";
-import {CodeEditor} from "./CodeEditor";
 
 //hooks are called in same order and hence react can maintain that state
 //always use hooks at top level of the function body, never nested or in loops
@@ -69,9 +68,6 @@ const SimpleHooks = (props) => {
             {displayTodos()}
             <h1>Posts</h1>
             {displayPosts()}
-
-
-            <CodeEditor files='SimpleHooks'/>
         </div>
     )
 }

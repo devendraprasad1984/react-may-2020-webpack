@@ -3,7 +3,6 @@ import {forms} from './globals';
 import {Modal} from './Modal';
 import {Accordian} from './Accordian';
 import {info,error,success} from 'toastr';
-import {CodeEditor} from "./CodeEditor";
 
 export const DisplayBudgetForms = () => forms.names.map((x, id) => <Accordian key={'acc_id_'+id} counter={id} header={x}/>);
 let submitBudget = () => {
@@ -47,8 +46,6 @@ export const Budget = ({title, callback}) => {
                 }}/>
             </div>
             {callback()}
-
-            <CodeEditor files='BudgetForm,Accordian,Modal'/>
         </div>
     );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from "../Redux/AppActions";
-import {CodeEditor} from "./CodeEditor";
 
 const CounterRedux = (props) => {
     let {counter,increment,decrement,reset,todo} = props;
@@ -14,8 +13,6 @@ const CounterRedux = (props) => {
             <button className='btn red' onClick={() => reset()}>Reset</button>
             <h1>Changing Counter: {counter}</h1>
             {/*<h2>todos from other component: {todo.map(x=><div>{x.text}</div>)}</h2>*/}
-
-            <CodeEditor files='CounterRedux'/>
         </div>
     )
 }
