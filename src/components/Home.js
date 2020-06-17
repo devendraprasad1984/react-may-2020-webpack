@@ -1,7 +1,7 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Dropdown} from "semantic-ui-react";
-import {success, error, warning} from 'toastr';
 import {CodeEditor} from "./CodeEditor";
+import {CardModal} from "./CardModal";
 
 export const Home = () => {
     const mform = useRef(null);
@@ -82,28 +82,59 @@ export const Home = () => {
         {first_name: 'Tobias', last_name: 'Anhalt'},
     ];
     const [workers, setWorkers] = useState(coworkers);
-    useEffect(()=>{
-        workers.map(x=>x.status='offline');
-    },[]);
+    useEffect(() => {
+        workers.map(x => x.status = 'offline');
+    }, []);
     let changeStatus = (workerObj, index) => {
         // let worker=workers.filter(x=>x.first_name===workerObj.first_name && x.last_name===workerObj.last_name);
-        let worker=workers[index];
-        worker.status=worker.status==='online'?'offline':'online';
-        let updatedWorkers=[...workers];
-        updatedWorkers[index]=worker;
+        let worker = workers[index];
+        worker.status = worker.status === 'online' ? 'offline' : 'online';
+        let updatedWorkers = [...workers];
+        updatedWorkers[index] = worker;
         setWorkers(updatedWorkers);
-        console.log('workers',workers);
+        console.log('workers', workers);
     }
     let testWebbee = () => {
         return workers.map((x, i) =>
-            <div key={'id'+i}>
+            <div key={'id' + i}>
                 <div className='leftAlign'><h1>{x.first_name} - {x.last_name} - {x.status}</h1></div>
                 <div className='rightAlign'>
-                    <button className={x.status==='offline'?'btn red':'btn green'} onClick={() => {
+                    <button className={x.status === 'offline' ? 'btn red' : 'btn green'} onClick={() => {
                         changeStatus(x, i)
                     }}>{x.status}
                     </button>
                 </div>
+            </div>
+        );
+    }
+
+    let cardLayoutStyle = {
+        padding:'5px'
+        ,margin:'2px'
+    }
+    let cardMainBox = {
+        display: 'flex'
+        ,marginBottom: '10px'
+        ,overflow:'auto'
+        ,position:'relative'
+        ,width:'100%'
+        ,height:'auto'
+        ,flexWrap: 'wrap'
+    }
+    let cardData = [
+        {name: 'Mathew', color:'red', date: '22jan2020', desc: 'wow good', frnd: '22',image:'matthew.png'}
+        , {name: 'Elliot', color:'purple', date: '20dec2011', desc: 'wow good', frnd: '555',image:'elliot.jpg'}
+        , {name: 'Molly', color:'green', date: '16May2015', desc: 'wow good', frnd: '3212',image:'molly.png'}
+        , {name: 'Jenny', color:'orange', date: '01Sep2017', desc: 'wow good', frnd: '928',image:'jenny.jpg'}
+        , {name: 'Molly', color:'green', date: '16May2015', desc: 'wow good', frnd: '3212',image:'molly.png'},
+        , {name: 'Jenny', color:'blue', date: '01Sep2017', desc: 'wow good', frnd: '928',image:'jenny.jpg'}
+        , {name: 'Elliot', color:'purple', date: '20dec2011', desc: 'wow good', frnd: '555',image:'elliot.jpg'}
+        ,{name: 'Mathew', color:'red', date: '22jan2020', desc: 'wow good', frnd: '22',image:'matthew.png'}
+    ]
+    let prepareCardLayout = () => {
+        return cardData.map((x,i) =>
+            <div key={'cardKey'+i} style={cardLayoutStyle}>
+                <CardModal name={x.name} color={x.color} date={x.date} frnd={x.frnd} desc={x.frnd} image={x.image}/>
             </div>
         );
     }
@@ -125,9 +156,13 @@ export const Home = () => {
 
             {semantic_drop_down_check()}
             {promiseCheck()}
-            <div style={{width:'70%'}}>
+            <div style={{width: '70%'}}>
                 <h1>online/offline</h1>
                 {testWebbee()}
+            </div>
+
+            <div style={cardMainBox}>
+            {prepareCardLayout()}
             </div>
 
             <CodeEditor files='Home,TopHoc,Routing'/>
